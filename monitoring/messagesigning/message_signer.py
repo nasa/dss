@@ -9,7 +9,7 @@ from monitoring.messagesigning.config import Config
 from monitoring.messagesigning.hasher import get_content_digest
 
 def get_x_utm_jws_header():
-      return '\"alg\"=\"{}\", \"typ\"=\"{}\", \"kid\"=\"{}\", \"x5u\"=\"{}\"'.format(
+      return 'alg=\"{}\", typ=\"{}\", kid=\"{}\", x5u=\"{}\"'.format(
         'RS256', 'JOSE', get_key_id(), 'http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der'
       )
 
