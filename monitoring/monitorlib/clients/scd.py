@@ -33,7 +33,7 @@ def create_subscription(utm_client: UTMClientSession, id: str):
             "time_start": {"value": "{}".format(time_start), "format": "RFC3339"},
             "time_end": {"value": "{}".format(time_end), "format": "RFC3339"},
         },
-        "uss_base_url": "http://host.docker.internal:10206/interop",
+        "uss_base_url": "http://host.docker.internal:8074/mock/scd",
         "notify_for_operational_intents": True,
         "notify_for_constraints": True,
     }

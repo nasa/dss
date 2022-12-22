@@ -19,7 +19,7 @@ headers = {
     "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cGlyZXNfaW4iOjE2NjY2NDczOTcsImlzcyI6ImR1bW15LmF1dGgiLCJqdGkiOiIzOTAyMDBjYS04M2M5LTQ0NjYtYmFhMi04ZDU3ZTE0YmMxNTMiLCJuYmYiOjE2NjY2NDM3OTcsInNjb3BlIjoidXRtLnN0cmF0ZWdpY19jb29yZGluYXRpb24iLCJzdWIiOiJucHN1MS50ZXN0aW5nLm5hc2EuZ292IiwidG9rZW5fdHlwZSI6ImJlYXJlciJ9.D8UPw4XzkLBXMmGiW7ZJVD8amQtgbtf78hHxQ5K41PJkXnPOwolLcMYyC4diQG4glEshblg3zVLmHQ1oZGUjM651eUa5YvkqVwaGWHFMpzeFMlyaRIwVEfT-l5cY9XfQRgdesqt6vviuMiH0-IEajhzA798oZYIEHgX_9FOqLwk",
     "content-digest": "sha-512=:EPlfPvi5GIXLnzFiCkQHsirnCv1R3LzxYCawEDaLeaDltuYGt8h1U6cPCG2lmzUJj58rVWUc3BIWcTFatSqg6A==:",
     "@method": "POST",
-    "x-utm-jws-header": 'alg="RS256", typ="JOSE", kid="dEQrbd7DCiGBSa0B8Txt5k0xLoKgHbUi2bgqERe5ag8", x5u="http://host.docker.internal:10206/interop/.well-known/uas-traffic-management/UFAA_UssSignKey_pub_dev.der"',
+    "x-utm-jws-header": 'alg="RS256", typ="JOSE", kid="dEQrbd7DCiGBSa0B8Txt5k0xLoKgHbUi2bgqERe5ag8", x5u="http://localhost:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der"',
     "content-type": "application/json",
     "@query": "?",
     "@path": "/mock/scd/uss/v1/operational_intents",
@@ -46,7 +46,7 @@ signature = base64.b64decode(
 )
 hash = SHA256.new(rsb)
 public_key_content = requests.get(
-    "http://localhost:10206/interop/.well-known/uas-traffic-management/UFAA_UssSignKey_pub_dev.der"
+    "http://localhost:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der"
 ).content
 public_key = RSA.import_key(public_key_content)
 with open("UFAA_UssSignKey_priv_dev.pem", "rb") as pkeyfile:
