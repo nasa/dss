@@ -69,7 +69,7 @@ def get_signature_base(object_to_sign, signed_type):
       "x-utm-jws-header": get_x_utm_jws_header()
     }
   curr_time = str(int(time.time()))
-  signature_param_str = "\"{}\": ({});{}".format("@signature-params", wrap_components(covered_components), curr_time)
+  signature_param_str = "\"{}\": ({});created={}".format("@signature-params", wrap_components(covered_components), curr_time)
   sig_base = ""
   for component in covered_components:
     sig_base += "\"{}\": {}\n".format(
