@@ -69,6 +69,7 @@ def query_operational_intent_references(
         "/dss/v1/operational_intent_references/query", json=req, scope=scd.SCOPE_SC
     )
     if resp.status_code != 200:
+        logger.error(resp)
         raise OperationError(
             "queryOperationalIntentReferences failed {}:\n{}".format(
                 resp.status_code, resp.content.decode("utf-8")
@@ -91,6 +92,7 @@ def create_operational_intent_reference(
         scope=scd.SCOPE_SC,
     )
     if resp.status_code != 200 and resp.status_code != 201:
+        logger.error(resp)
         raise OperationError(
             "createOperationalIntentReference failed {}:\n{}".format(
                 resp.status_code, resp.content.decode("utf-8")
@@ -107,6 +109,7 @@ def delete_operational_intent_reference(
         scope=scd.SCOPE_SC,
     )
     if resp.status_code != 200:
+        logger.error(resp)
         raise OperationError(
             "deleteOperationalIntentReference failed {}:\n{}".format(
                 resp.status_code, resp.content.decode("utf-8")
@@ -126,11 +129,10 @@ def get_operational_intent_details(
     )
     if resp.status_code != 200:
         logger.error(resp)
-        raise OperationError(
-            "getOperationalIntentDetails failed {}:\n{}".format(
+        logger.error("getOperationalIntentDetails failed {}:\n{}".format(
                 resp.status_code, resp.content.decode("utf-8")
-            )
-        )
+            ))
+        return None, resp
     resp_body = ImplicitDict.parse(resp.json(), scd.GetOperationalIntentDetailsResponse)
     return resp_body.operational_intent, resp
 
@@ -147,11 +149,8 @@ def notify_operational_intent_details_changed(
     )
     if resp.status_code != 204 and resp.status_code != 200:
         logger.error(resp)
-        raise OperationError(
-            "notifyOperationalIntentDetailsChanged failed {}:\n{}".format(
-                resp.status_code, resp.content.decode("utf-8")
-            )
-        )
+        logger.error("notifyOperationalIntentDetailsChanged failed {}:\n{}".format(
+                resp.status_code, resp.content.decode("utf-8")))
     return resp
 
 

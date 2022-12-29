@@ -65,6 +65,12 @@ def query_operational_intents(
             resources.utm_client, op_intent_ref.uss_base_url, op_intent_ref.id
         )
         response_validator.validate_response(resp)
+        if resp.status_code != 200:
+            raise OperationError(
+                "getOperationalIntentDetails failed {}:\n{}".format(
+                    resp.status_code, resp.content.decode("utf-8")
+                )
+            )
         updated_op_intents.append(op_int)
 
     with db as tx:
@@ -223,18 +229,29 @@ def inject_flight(flight_id: str) -> Tuple[str, int]:
         if subscriber.uss_base_url == "http://host.docker.internal:8074/mock/scd":
             result.subscribers.remove(subscriber)
 
+    op_intent_details = scd.OperationalIntentDetails(
+        volumes=req_body.operational_intent.volumes,
+        off_nominal_volumes=req_body.operational_intent.off_nominal_volumes,
+        priority=req_body.operational_intent.priority,
+    )
     notify_responses = scd_client.notify_subscribers(
         resources.utm_client,
         result.operational_intent_reference.id,
         scd.OperationalIntent(
             reference=result.operational_intent_reference,
-            details=req_body.operational_intent,
+            details=op_intent_details,
         ),
         result.subscribers,
     )
 
     for notify_response in notify_responses:
         response_validator.validate_response(notify_response)
+        if notify_response.status_code != 204 and notify_response.status_code != 200:
+            raise OperationError(
+                "notifyOperationalIntentDetailsChanged failed {}:\n{}".format(
+                    notify_response.status_code, notify_response.content.decode("utf-8")
+                )
+            )
 
     # Store flight in database
     record = database.FlightRecord(
