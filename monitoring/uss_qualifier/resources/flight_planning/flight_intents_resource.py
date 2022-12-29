@@ -41,12 +41,15 @@ class FlightIntentsResource(Resource[FlightIntentsSpecification]):
                 req.operational_intent.volumes
                 + req.operational_intent.off_nominal_volumes
             ):
-                volume.time_start.value = StringBasedDateTime(
-                    volume.time_start.value.datetime + dt
-                )
-                volume.time_end.value = StringBasedDateTime(
-                    volume.time_end.value.datetime + dt
-                )
+                st = (volume.time_start.value.datetime + dt).isoformat(timespec="milliseconds")
+                if volume.time_start.value.datetime.tzinfo is None:
+                    st += "Z"
+                volume.time_start.value = StringBasedDateTime(st)
+
+                et = (volume.time_end.value.datetime + dt).isoformat(timespec="milliseconds")
+                if volume.time_end.value.datetime.tzinfo is None:
+                    et += "Z"
+                volume.time_end.value = StringBasedDateTime(et)
             intents.append(req)
 
         return intents

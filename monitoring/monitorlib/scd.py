@@ -232,7 +232,7 @@ def make_vol4(
 
 
 def make_time(t: datetime) -> Time:
-    s = t.isoformat()
+    s = t.isoformat(timespec="milliseconds")
     if t.tzinfo is None:
         s += "Z"
     return Time(value=StringBasedDateTime(s), format="RFC3339")
