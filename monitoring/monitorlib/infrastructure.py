@@ -58,6 +58,8 @@ class AuthAdapter(object):
             request.headers[k] = v
         try:
             if os.environ.get("MESSAGE_SIGNING", None) == "true":
+                if not request.headers.get("content-type"):
+                    request.headers["content-type"]=""
                 signed_headers = signer.get_signed_headers(request)
                 request.headers.update(signed_headers)
         except Exception as e:
