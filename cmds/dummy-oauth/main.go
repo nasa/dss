@@ -141,6 +141,7 @@ func (s *DummyOAuthImplementation) PostToken(ctx context.Context, req *dummyoaut
 		"sub":        sub,
 		"nbf":        nbf,
 		"jti":        jti,
+		"client_id":  sub,
 	})
 
 	// Sign and get the complete encoded token as a string using the secret
