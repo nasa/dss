@@ -3,7 +3,7 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 "${SCRIPT_DIR}/run_locally_base.sh"
 
-AUTH="DummyOAuth(http://host.docker.internal:8085/token,uss1)"
+AUTH="DummyOAuth(http://host.docker.internal:8085/token,mock-uss.interuss.com)"
 DSS="http://host.docker.internal:8082"
 PUBLIC_KEY="/var/test-certs/auth2.pem"
 AUD=${MOCK_USS_TOKEN_AUDIENCE:-localhost,host.docker.internal}

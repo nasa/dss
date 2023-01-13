@@ -74,6 +74,7 @@ func (s *DummyOAuthImplementation) GetToken(ctx context.Context, req *dummyoauth
 		"iss":   issuer,
 		"exp":   expireTime,
 		"sub":   sub,
+		"client_id": sub,
 	})
 
 	// Sign and get the complete encoded token as a string using the secret

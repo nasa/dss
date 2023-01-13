@@ -25,7 +25,7 @@ monitoring/build.sh || exit 1
 CONFIG_NAME="${1:-configurations.dev.local_test}"
 CONFIG_FLAG="--config ${CONFIG_NAME}"
 
-AUTH_SPEC='DummyOAuth(http://host.docker.internal:8085/token,uss_qualifier)'
+AUTH_SPEC='DummyOAuth(http://host.docker.internal:8085/token,mock-uss.interuss.com)'
 
 QUALIFIER_OPTIONS="$CONFIG_FLAG"
 
