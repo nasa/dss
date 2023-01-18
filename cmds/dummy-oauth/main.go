@@ -130,7 +130,7 @@ func (s *DummyOAuthImplementation) PostToken(ctx context.Context, req *dummyoaut
 	var nbf int64
 	nbf = time.Now().Unix()
 
-	var issuer string = "dummy.auth"
+	var issuer string = "dummy"
 	var tokenType string = "bearer"
 	jti := uuid.New().String()
 	token := jwt.NewWithClaims(jwt.SigningMethodRS256, jwt.MapClaims{
