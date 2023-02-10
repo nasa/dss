@@ -6,6 +6,7 @@ import flask
 import requests.exceptions
 import yaml
 import json
+import os
 from datetime import datetime
 
 from loguru import logger
@@ -108,10 +109,14 @@ def scdsc_injection_end_reporter() -> Tuple[str, int]:
 @requires_scope([SCOPE_SCD_QUALIFIER_INJECT])
 def scd_capabilities() -> Tuple[str, int]:
     """Implements USS capabilities in SCD automated testing injection API."""
-    try:
-        scd_client.create_subscription(resources.utm_client, str(uuid.uuid4()))
-    except Exception as e:
-        logger.error("Could not create subscription: {}".format(str(e)))
+    if os.environ.get("NO_SUBSCR", None) == "false":
+        try:
+            scd_client.create_subscription(resources.utm_client, str(uuid.uuid4()))
+        except Exception as e:
+            logger.error("Could not create subscription: {}".format(str(e)))
+    else:
+        logger.info("No subscription created for mock uss.")
+
     return flask.jsonify(
         CapabilitiesResponse(
             capabilities=[
