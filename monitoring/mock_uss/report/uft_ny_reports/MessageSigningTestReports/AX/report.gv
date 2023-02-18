@@ -1,0 +1,85 @@
+digraph {
+	node [shape=box]
+	combination_selector [label="combination_selector
+flight_planning.FlightPlannerCombinationSelectorResource" fillcolor=lightskyblue1 shape=note style=filled]
+	conflicting_flights [label="conflicting_flights
+flight_planning.FlightIntentsResource" fillcolor=lightskyblue1 shape=note style=filled]
+	conflicting_flights -> action_generators_flight_planning_FlightPlannerCombinations
+	priority_preemption_flights [label="priority_preemption_flights
+flight_planning.FlightIntentsResource" fillcolor=lightskyblue1 shape=note style=filled]
+	priority_preemption_flights -> action_generators_flight_planning_FlightPlannerCombinations_2
+	utm_auth [label="utm_auth
+communications.AuthAdapterResource" fillcolor=lightskyblue1 shape=note style=filled]
+	utm_auth -> flight_planners
+	utm_auth -> dss
+	utm_auth -> mock_uss
+	flight_planners [label="flight_planners
+flight_planning.FlightPlannersResource" fillcolor=lightskyblue1 shape=note style=filled]
+	flight_planners -> action_generators_flight_planning_FlightPlannerCombinations
+	flight_planners -> action_generators_flight_planning_FlightPlannerCombinations_2
+	dss [label="dss
+astm.f3548.v21.DSSInstanceResource" fillcolor=lightskyblue1 shape=note style=filled]
+	dss -> action_generators_flight_planning_FlightPlannerCombinations
+	dss -> action_generators_flight_planning_FlightPlannerCombinations_2
+	mock_uss [label="mock_uss
+interuss.MockUSSResource" fillcolor=lightskyblue1 shape=note style=filled]
+	mock_uss -> scenarios_faa_uft_StartMessageSigningReport
+	mock_uss -> scenarios_faa_uft_FinalizeMessageSigningReport
+	scenarios_faa_uft_StartMessageSigningReport [label="Start message signing
+faa.uft.StartMessageSigningReport" fillcolor=lightgreen shape=component style=filled]
+	scenarios_faa_uft_StartMessageSigningReport [label="Start message signing
+faa.uft.StartMessageSigningReport" fillcolor=lightgreen shape=component style=filled]
+	scenarios_astm_utm_NominalPlanning [label="Nominal planning
+astm.utm.NominalPlanning
+First-mover USS=uss1
+Second USS=mock_uss" fillcolor=lightgreen shape=component style=filled]
+	scenarios_astm_utm_NominalPlanning [label="Nominal planning
+astm.utm.NominalPlanning
+First-mover USS=uss1
+Second USS=mock_uss" fillcolor=lightgreen shape=component style=filled]
+	scenarios_astm_utm_NominalPlanning_2 [label="Nominal planning
+astm.utm.NominalPlanning
+First-mover USS=mock_uss
+Second USS=uss1" fillcolor=lightgreen shape=component style=filled]
+	scenarios_astm_utm_NominalPlanning_2 [label="Nominal planning
+astm.utm.NominalPlanning
+First-mover USS=mock_uss
+Second USS=uss1" fillcolor=lightgreen shape=component style=filled]
+	action_generators_flight_planning_FlightPlannerCombinations [label="Action generator
+flight_planning.FlightPlannerCombinations" shape=box3d]
+	action_generators_flight_planning_FlightPlannerCombinations -> scenarios_astm_utm_NominalPlanning
+	action_generators_flight_planning_FlightPlannerCombinations -> scenarios_astm_utm_NominalPlanning_2
+	scenarios_astm_utm_NominalPlanningPriority [label="Nominal planning with priority
+astm.utm.NominalPlanningPriority
+First USS=uss1
+Priority USS=mock_uss" fillcolor=lightgreen shape=component style=filled]
+	scenarios_astm_utm_NominalPlanningPriority [label="Nominal planning with priority
+astm.utm.NominalPlanningPriority
+First USS=uss1
+Priority USS=mock_uss" fillcolor=lightgreen shape=component style=filled]
+	scenarios_astm_utm_NominalPlanningPriority_2 [label="Nominal planning with priority
+astm.utm.NominalPlanningPriority
+First USS=mock_uss
+Priority USS=uss1" fillcolor=lightgreen shape=component style=filled]
+	scenarios_astm_utm_NominalPlanningPriority_2 [label="Nominal planning with priority
+astm.utm.NominalPlanningPriority
+First USS=mock_uss
+Priority USS=uss1" fillcolor=lightgreen shape=component style=filled]
+	action_generators_flight_planning_FlightPlannerCombinations_2 [label="Action generator
+flight_planning.FlightPlannerCombinations" shape=box3d]
+	action_generators_flight_planning_FlightPlannerCombinations_2 -> scenarios_astm_utm_NominalPlanningPriority
+	action_generators_flight_planning_FlightPlannerCombinations_2 -> scenarios_astm_utm_NominalPlanningPriority_2
+	suites_astm_utm_f3548_21 [label="ASTM F3548-21
+astm.utm.f3548_21" shape=folder]
+	suites_astm_utm_f3548_21 -> action_generators_flight_planning_FlightPlannerCombinations
+	suites_astm_utm_f3548_21 -> action_generators_flight_planning_FlightPlannerCombinations_2
+	scenarios_faa_uft_FinalizeMessageSigningReport [label="Finalize message signing
+faa.uft.FinalizeMessageSigningReport" fillcolor=lightgreen shape=component style=filled]
+	scenarios_faa_uft_FinalizeMessageSigningReport [label="Finalize message signing
+faa.uft.FinalizeMessageSigningReport" fillcolor=lightgreen shape=component style=filled]
+	suites_faa_uft_message_signing [label="UFT message signing
+faa.uft.message_signing" shape=folder]
+	suites_faa_uft_message_signing -> scenarios_faa_uft_StartMessageSigningReport
+	suites_faa_uft_message_signing -> suites_astm_utm_f3548_21
+	suites_faa_uft_message_signing -> scenarios_faa_uft_FinalizeMessageSigningReport
+}

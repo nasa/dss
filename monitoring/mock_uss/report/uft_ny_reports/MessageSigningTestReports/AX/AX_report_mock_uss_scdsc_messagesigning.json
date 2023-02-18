@@ -1,0 +1,1968 @@
+{
+    "findings": {
+        "issues": [],
+        "interactions": [
+            {
+                "interaction_id": "4ebf68a1-cf60-4900-b2c9-acb541eacda0",
+                "purpose": "Checking that the message signing headers in the incoming POST request to the mock uss endpoint /mock/scd/uss/v1/operational_intents are valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents",
+                        "initiated_at": "2023-01-03T20:00:12.308428",
+                        "headers": "{\"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiaHR0cDovL29hdXRoLmRzcy5kZXZjbHVzdGVyLmxvY2FsIiwic2NvcGUiOiJ1dG0uc3RyYXRlZ2ljX2Nvb3JkaW5hdGlvbiIsInN1YiI6InVzcy51ZnQuYXhlbnRlcnByaXplLmNvbSJ9.PzDqsNwyOIxGQH1LvxpCOCrZ4GvvWdxiNv2TDkV3gSHCUgnOrezqQJ5LwGp5sVfSiONqzWI767anGCsW85ORsAJ_PC3s9y0fxN2qSsK182RX2eFqChPF7PC9dTwwhhzobsNjcSWp5D94Fjcc_YGtyT1MVnXPaXZqtZcv2x53Wj8\", \"Content-Type\": \"application/json\", \"X-Utm-Message-Signature\": \"utm-message-signature=:eJh7siGos1tzdKJu7M37p+P9HXgr5eeqZmCh8SOneC7XfVLDAiAdWbKZQnzsmb+OWChXcBByypQOfg31tkxdgUO1N7y2Pyxq6G6QMtqIHZx3kudGJRuivJ7MRuO7PvgmMKpvmurLMz6mO5VUP+dj30TxOZlyHsxdJ//kQQZwDsqxMJpj/kSuNQJbxcqM0DXfWpdUJ5kD+sfAy5QcRV7PmFgecsy3ewUl+ff6v7g1ZU8kJ8ii9FzKe+BmS+3YVILTqYfJMKH1wN7v8QQ2nys4VTtvdGScRRQCk56vsWZftGJVzo8Nz9y0QUdafFp8K7QWYyp+qykeEDaXbx3/Cs/uKQ==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776012\", \"Content-Digest\": \"sha-512=:1N9k4NFOtX8Yl0TPZX1QTME3fXMPxZSApnUgra/FsEXrAA3ja96TjaD3rCztLE3mHKIj1hvlX1Qz550xBBYwOA==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"13d76c59-fcba-4de6-9d72-784d85903a22\\\", x5u=\\\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\\\"\", \"Content-Length\": \"3831\", \"Host\": \"host.docker.internal:8074\", \"Connection\": \"Keep-Alive\", \"Accept-Encoding\": \"gzip\", \"User-Agent\": \"okhttp/4.10.0\"}",
+                        "body": "{\"operational_intent_id\":\"6691f41f-49b5-4d21-9a0d-66a9055c8965\",\"operational_intent\":{\"reference\":{\"id\":\"6691f41f-49b5-4d21-9a0d-66a9055c8965\",\"manager\":\"uss.uft.axenterprize.com\",\"uss_availability\":\"Unknown\",\"version\":1,\"state\":\"Accepted\",\"ovn\":\"kGLQdWNlzblzUr6GuHa260JY-wcCQY.rizmRGCihtog_\",\"time_start\":{\"value\":\"2023-01-03T20:08:10.018Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-01-03T20:13:10.018Z\",\"format\":\"RFC3339\"},\"uss_base_url\":\"http://host.docker.internal:8090\",\"subscription_id\":\"c1aff61e-2f71-4857-b238-fbab1ef10628\"},\"details\":{\"volumes\":[{\"volume\":{\"outline_polygon\":{\"vertices\":[{\"lng\":46.97491999984008,\"lat\":7.477423822749622},{\"lng\":46.97538499982026,\"lat\":7.477423821039847},{\"lng\":46.97539822817162,\"lat\":7.477424770457274},{\"lng\":46.975411329130466,\"lat\":7.477427609667229},{\"lng\":46.975424176527724,\"lat\":7.477432311328011},{\"lng\":46.97543664663613,\"lat\":7.477438830161459},{\"lng\":46.975448619361856,\"lat\":7.477447103388957},{\"lng\":46.975459979401066,\"lat\":7.477457051335981},{\"lng\":46.97547061735031,\"lat\":7.477468578199379},{\"lng\":46.97548043076024,\"lat\":7.477481572969964},{\"lng\":46.97548932512221,\"lat\":7.4774959105015855},{\"lng\":46.97549721477847,\"lat\":7.477511452716338},{\"lng\":46.97550402374711,\"lat\":7.47752804993433},{\"lng\":46.975509686453854,\"lat\":7.477545542315188},{\"lng\":46.97551414836356,\"lat\":7.477563761397435},{\"lng\":46.9755173665054,\"lat\":7.477582531720886},{\"lng\":46.975519309886806,\"lat\":7.477601672516463},{\"lng\":46.97551995979184,\"lat\":7.477620999447144},{\"lng\":46.97551995980457,\"lat\":7.478057000544437},{\"lng\":46.975519309900726,\"lat\":7.478076327475301},{\"lng\":46.97551736652059,\"lat\":7.478095468271412},{\"lng\":46.97551414838003,\"lat\":7.478114238595763},{\"lng\":46.97550968647161,\"lat\":7.478132457679282},{\"lng\":46.97550402376608,\"lat\":7.478149950061773},{\"lng\":46.97549721479852,\"lat\":7.478166547281737},{\"lng\":46.97548932514323,\"lat\":7.4781820894987705},{\"lng\":46.97548043078203,\"lat\":7.478196427032943},{\"lng\":46.97547061737267,\"lat\":7.478209421806301},{\"lng\":46.975459979423775,\"lat\":7.478220948672645},{\"lng\":46.97544861938469,\"lat\":7.478230896622737},{\"lng\":46.97543664665883,\"lat\":7.4782391698533655},{\"lng\":46.975424176550064,\"lat\":7.4782456886899595},{\"lng\":46.97541132915219,\"lat\":7.4782503903538515},{\"lng\":46.97539822819251,\"lat\":7.478253229566841},{\"lng\":46.975384999840095,\"lat\":7.478254178987183},{\"lng\":46.974919999820244,\"lat\":7.478254177277408},{\"lng\":46.97490677142331,\"lat\":7.478253227761765},{\"lng\":46.97489367042681,\"lat\":7.4782503884602685},{\"lng\":46.97488082300081,\"lat\":7.4782456867183855},{\"lng\":46.974868352873266,\"lat\":7.478239167817867},{\"lng\":46.974856380138455,\"lat\":7.478230894540598},{\"lng\":46.974845020100375,\"lat\":7.478220946563947},{\"lng\":46.974834382162385,\"lat\":7.478209419693374},{\"lng\":46.974824568773556,\"lat\":7.47819642493976},{\"lng\":46.97481567444202,\"lat\":7.4781820874502785},{\"lng\":46.97480778482489,\"lat\":7.478166545303149},{\"lng\":46.9748009759033,\"lat\":7.478149948177879},{\"lng\":46.97479531325065,\"lat\":7.4781324559137685},{\"lng\":46.97479085140123,\"lat\":7.478114236970597},{\"lng\":46.9747876333249,\"lat\":7.478095466806278},{\"lng\":46.97478569001336,\"lat\":7.478076326187155},{\"lng\":46.974785040181715,\"lat\":7.478056999447158},{\"lng\":46.97478504019445,\"lat\":7.477621000544429},{\"lng\":46.974785690027296,\"lat\":7.477601673804613},{\"lng\":46.974787633340085,\"lat\":7.477582533186026},{\"lng\":46.97479085141769,\"lat\":7.477563763022608}]},\"altitude_lower\":{\"value\":605.0,\"reference\":\"W84\",\"units\":\"M\"},\"altitude_upper\":{\"value\":635.0,\"reference\":\"W84\",\"units\":\"M\"}},\"time_start\":{\"value\":\"2023-01-03T20:08:10.018Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-01-03T20:13:10.018Z\",\"format\":\"RFC3339\"}}],\"off_nominal_volumes\":[],\"priority\":0}},\"subscriptions\":[{\"subscription_id\":\"d07a16ae-708a-484b-84d4-d2cd45e360fe\",\"notification_index\":1}]}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "json": null,
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776013\", \"x-utm-message-signature\": \"utm-message-signature=:nssWgf2lXvyMUXDj3Ucsv3a4lVCFnZ+OkFJGt8SS2gmiUZIHwE7up4XxFZYec3pIwkqqT/VWEqt12MRHjtEXmsiwisakwxr/PZZ49stEDRxdGqAKX5N9/LHUPeY6F0iBCHP1FaTuXzUr/K1zxoGJ5Ao4KVjnjVaoe+YGoxCD4EIDCYAFxkz7U7VZYF6gXeX6WlyG9cYG2e22xd3HZQgfcWbd3jee++fV99VzgwmoWKb8aW4v5OeGT4yT84c+Yjg746I8mlXOyirHqTZXxKUREOFtiQqh9f9c+xL8KMUAnZHgl0sGJzbZxtdh3sYSwlIjQrSqnNGD11yQSartlHi+Bw==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming POST request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents should be valid."
+                }
+            },
+            {
+                "interaction_id": "b28d2700-a036-4f67-9d00-26db2c1f3395",
+                "purpose": "Message signing headers in the response from the outgoing GET request to http://host.docker.internal:8090/uss/v1/operational_intents/6691f41f-49b5-4d21-9a0d-66a9055c8965 should be valid.",
+                "query": {
+                    "request": {
+                        "method": "GET",
+                        "url": "http://host.docker.internal:8090/uss/v1/operational_intents/6691f41f-49b5-4d21-9a0d-66a9055c8965",
+                        "headers": "{\"User-Agent\": \"python-requests/2.25.1\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept\": \"*/*\", \"Connection\": \"keep-alive\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTE3MCwiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.ZHtgGkuz4k6kscMxiJ2bAw12w9Xw7YHpMnaid9yqlNMcz5pLxVwCez5nHqKYzkaylFOjUYrlRH6_4X4cXIQRYDqpqzl4b8uslolV7JWRUJ3uYJGeMik95zdS_ov9WxfJ7p6cHgkbdjK-zvm8z_PU5rMh1giNKpAnCqitFJ63hLE\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776013\", \"x-utm-message-signature\": \"utm-message-signature=:CpjAW7NYUjPOQBmh2v3Zs4Wll+jsWfv9cXpjvn+U4eP1XML2ttZL4tGrYdgWgnxymzS+3CW3BAyQpcRQpg2GWGVgDap9PiGnIKLH0rOhonitT5+c93ZOn5TlMUwjh6eqL0V8B6w/CAoRMODXHtfhseSUMmvsOIomhH7CwzdiupmceNaskk6tdXgwgpY5IdKsW54/+/DH8Xw7t4poLbVlrvHF6GE2XO/mGDfZ1KfOxJjMFBJ61O8MSQRkXT0XJ3y000mNSxbmtWgwQC70YcLkb/AqxaTb6UVNQxBVova6azxyf9MwRAv28MwS1pE+KKRVpNe4R7LCGg4ikfEkpO92iA==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}",
+                        "body": null
+                    },
+                    "response": {
+                        "code": 200,
+                        "headers": "{'content-digest': 'sha-512=:NW6mQw3GaLuCfhXOzT72MSmQ2pV1L8WDyMeaCcNqCezJBSxx1cVqmWLqS3A4vyjWENt88dJOb8MhfK5QhCLK2Q==:', 'x-utm-jws-header': 'alg=\"RS256\", typ=\"JOSE\", kid=\"13d76c59-fcba-4de6-9d72-784d85903a22\", x5u=\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\"', 'x-utm-message-signature': 'utm-message-signature=:PILL8DwBQgVx7FIT4+TJokgXdsZPbqDNA3mZgVyF5Y+y86o8dGRYlARE/HkMxTZtlS3NSUZURUQ0SNgWCRjJoLOizhw3IbIaMnk3b8oRBpJShYLcATU/D/AuaA/GVXLbD3w3lam2UbAaMDVJ1jww6qrKLE4PnDtDAtI9O7FSiERdylCVCwnuuc1xRRn+jSzTJU9OxmV+Q8pCbj8T8katK99VrLg1UhQEnfwM7rhqu6RoLiw34yFqS/tZ5Zmt4X/sX97j7cpApMEMjH1fy17C5emchG5AQJxaCtu0Jt2uM9ce7I5G3oHq2dX5znt8P4tiX7Nx1SWyEh6CexDzjoy2nw==:', 'x-utm-message-signature-input': 'utm-message-signature=(\"@status\" \"content-type\" \"content-digest\" \"x-utm-jws-header\");created=1672776013', 'Content-Type': 'application/json', 'Content-Length': '3668', 'Date': 'Tue, 03 Jan 2023 20:00:12 GMT', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'}",
+                        "json": {
+                            "operational_intent": {
+                                "reference": {
+                                    "id": "6691f41f-49b5-4d21-9a0d-66a9055c8965",
+                                    "manager": "uss.uft.axenterprize.com",
+                                    "uss_availability": "Unknown",
+                                    "version": 1,
+                                    "state": "Accepted",
+                                    "ovn": "kGLQdWNlzblzUr6GuHa260JY-wcCQY.rizmRGCihtog_",
+                                    "time_start": {
+                                        "value": "2023-01-03T20:08:10.018Z",
+                                        "format": "RFC3339"
+                                    },
+                                    "time_end": {
+                                        "value": "2023-01-03T20:13:10.018Z",
+                                        "format": "RFC3339"
+                                    },
+                                    "uss_base_url": "http://host.docker.internal:8090",
+                                    "subscription_id": "c1aff61e-2f71-4857-b238-fbab1ef10628"
+                                },
+                                "details": {
+                                    "volumes": [
+                                        {
+                                            "volume": {
+                                                "outline_polygon": {
+                                                    "vertices": [
+                                                        {
+                                                            "lng": 46.97491999984008,
+                                                            "lat": 7.477423822749622
+                                                        },
+                                                        {
+                                                            "lng": 46.97538499982026,
+                                                            "lat": 7.477423821039847
+                                                        },
+                                                        {
+                                                            "lng": 46.97539822817162,
+                                                            "lat": 7.477424770457274
+                                                        },
+                                                        {
+                                                            "lng": 46.975411329130466,
+                                                            "lat": 7.477427609667229
+                                                        },
+                                                        {
+                                                            "lng": 46.975424176527724,
+                                                            "lat": 7.477432311328011
+                                                        },
+                                                        {
+                                                            "lng": 46.97543664663613,
+                                                            "lat": 7.477438830161459
+                                                        },
+                                                        {
+                                                            "lng": 46.975448619361856,
+                                                            "lat": 7.477447103388957
+                                                        },
+                                                        {
+                                                            "lng": 46.975459979401066,
+                                                            "lat": 7.477457051335981
+                                                        },
+                                                        {
+                                                            "lng": 46.97547061735031,
+                                                            "lat": 7.477468578199379
+                                                        },
+                                                        {
+                                                            "lng": 46.97548043076024,
+                                                            "lat": 7.477481572969964
+                                                        },
+                                                        {
+                                                            "lng": 46.97548932512221,
+                                                            "lat": 7.4774959105015855
+                                                        },
+                                                        {
+                                                            "lng": 46.97549721477847,
+                                                            "lat": 7.477511452716338
+                                                        },
+                                                        {
+                                                            "lng": 46.97550402374711,
+                                                            "lat": 7.47752804993433
+                                                        },
+                                                        {
+                                                            "lng": 46.975509686453854,
+                                                            "lat": 7.477545542315188
+                                                        },
+                                                        {
+                                                            "lng": 46.97551414836356,
+                                                            "lat": 7.477563761397435
+                                                        },
+                                                        {
+                                                            "lng": 46.9755173665054,
+                                                            "lat": 7.477582531720886
+                                                        },
+                                                        {
+                                                            "lng": 46.975519309886806,
+                                                            "lat": 7.477601672516463
+                                                        },
+                                                        {
+                                                            "lng": 46.97551995979184,
+                                                            "lat": 7.477620999447144
+                                                        },
+                                                        {
+                                                            "lng": 46.97551995980457,
+                                                            "lat": 7.478057000544437
+                                                        },
+                                                        {
+                                                            "lng": 46.975519309900726,
+                                                            "lat": 7.478076327475301
+                                                        },
+                                                        {
+                                                            "lng": 46.97551736652059,
+                                                            "lat": 7.478095468271412
+                                                        },
+                                                        {
+                                                            "lng": 46.97551414838003,
+                                                            "lat": 7.478114238595763
+                                                        },
+                                                        {
+                                                            "lng": 46.97550968647161,
+                                                            "lat": 7.478132457679282
+                                                        },
+                                                        {
+                                                            "lng": 46.97550402376608,
+                                                            "lat": 7.478149950061773
+                                                        },
+                                                        {
+                                                            "lng": 46.97549721479852,
+                                                            "lat": 7.478166547281737
+                                                        },
+                                                        {
+                                                            "lng": 46.97548932514323,
+                                                            "lat": 7.4781820894987705
+                                                        },
+                                                        {
+                                                            "lng": 46.97548043078203,
+                                                            "lat": 7.478196427032943
+                                                        },
+                                                        {
+                                                            "lng": 46.97547061737267,
+                                                            "lat": 7.478209421806301
+                                                        },
+                                                        {
+                                                            "lng": 46.975459979423775,
+                                                            "lat": 7.478220948672645
+                                                        },
+                                                        {
+                                                            "lng": 46.97544861938469,
+                                                            "lat": 7.478230896622737
+                                                        },
+                                                        {
+                                                            "lng": 46.97543664665883,
+                                                            "lat": 7.4782391698533655
+                                                        },
+                                                        {
+                                                            "lng": 46.975424176550064,
+                                                            "lat": 7.4782456886899595
+                                                        },
+                                                        {
+                                                            "lng": 46.97541132915219,
+                                                            "lat": 7.4782503903538515
+                                                        },
+                                                        {
+                                                            "lng": 46.97539822819251,
+                                                            "lat": 7.478253229566841
+                                                        },
+                                                        {
+                                                            "lng": 46.975384999840095,
+                                                            "lat": 7.478254178987183
+                                                        },
+                                                        {
+                                                            "lng": 46.974919999820244,
+                                                            "lat": 7.478254177277408
+                                                        },
+                                                        {
+                                                            "lng": 46.97490677142331,
+                                                            "lat": 7.478253227761765
+                                                        },
+                                                        {
+                                                            "lng": 46.97489367042681,
+                                                            "lat": 7.4782503884602685
+                                                        },
+                                                        {
+                                                            "lng": 46.97488082300081,
+                                                            "lat": 7.4782456867183855
+                                                        },
+                                                        {
+                                                            "lng": 46.974868352873266,
+                                                            "lat": 7.478239167817867
+                                                        },
+                                                        {
+                                                            "lng": 46.974856380138455,
+                                                            "lat": 7.478230894540598
+                                                        },
+                                                        {
+                                                            "lng": 46.974845020100375,
+                                                            "lat": 7.478220946563947
+                                                        },
+                                                        {
+                                                            "lng": 46.974834382162385,
+                                                            "lat": 7.478209419693374
+                                                        },
+                                                        {
+                                                            "lng": 46.974824568773556,
+                                                            "lat": 7.47819642493976
+                                                        },
+                                                        {
+                                                            "lng": 46.97481567444202,
+                                                            "lat": 7.4781820874502785
+                                                        },
+                                                        {
+                                                            "lng": 46.97480778482489,
+                                                            "lat": 7.478166545303149
+                                                        },
+                                                        {
+                                                            "lng": 46.9748009759033,
+                                                            "lat": 7.478149948177879
+                                                        },
+                                                        {
+                                                            "lng": 46.97479531325065,
+                                                            "lat": 7.4781324559137685
+                                                        },
+                                                        {
+                                                            "lng": 46.97479085140123,
+                                                            "lat": 7.478114236970597
+                                                        },
+                                                        {
+                                                            "lng": 46.9747876333249,
+                                                            "lat": 7.478095466806278
+                                                        },
+                                                        {
+                                                            "lng": 46.97478569001336,
+                                                            "lat": 7.478076326187155
+                                                        },
+                                                        {
+                                                            "lng": 46.974785040181715,
+                                                            "lat": 7.478056999447158
+                                                        },
+                                                        {
+                                                            "lng": 46.97478504019445,
+                                                            "lat": 7.477621000544429
+                                                        },
+                                                        {
+                                                            "lng": 46.974785690027296,
+                                                            "lat": 7.477601673804613
+                                                        },
+                                                        {
+                                                            "lng": 46.974787633340085,
+                                                            "lat": 7.477582533186026
+                                                        },
+                                                        {
+                                                            "lng": 46.97479085141769,
+                                                            "lat": 7.477563763022608
+                                                        }
+                                                    ]
+                                                },
+                                                "altitude_lower": {
+                                                    "value": 605.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                },
+                                                "altitude_upper": {
+                                                    "value": 635.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                }
+                                            },
+                                            "time_start": {
+                                                "value": "2023-01-03T20:08:10.018Z",
+                                                "format": "RFC3339"
+                                            },
+                                            "time_end": {
+                                                "value": "2023-01-03T20:13:10.018Z",
+                                                "format": "RFC3339"
+                                            }
+                                        }
+                                    ],
+                                    "off_nominal_volumes": [],
+                                    "priority": 0
+                                }
+                            }
+                        }
+                    }
+                },
+                "context": {
+                    "test_name": "Validating response signatures.",
+                    "test_case": "Message signing headers in the response from the outgoing GET request to http://host.docker.internal:8090/uss/v1/operational_intents/6691f41f-49b5-4d21-9a0d-66a9055c8965 should be valid."
+                }
+            },
+            {
+                "interaction_id": "05b327b4-be44-49a1-8a00-d1ca546bf72c",
+                "purpose": "Checking that the message signing headers in the incoming POST request to the mock uss endpoint /mock/scd/uss/v1/operational_intents are valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents",
+                        "initiated_at": "2023-01-03T20:00:13.686239",
+                        "headers": "{\"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiaHR0cDovL29hdXRoLmRzcy5kZXZjbHVzdGVyLmxvY2FsIiwic2NvcGUiOiJ1dG0uc3RyYXRlZ2ljX2Nvb3JkaW5hdGlvbiIsInN1YiI6InVzcy51ZnQuYXhlbnRlcnByaXplLmNvbSJ9.PzDqsNwyOIxGQH1LvxpCOCrZ4GvvWdxiNv2TDkV3gSHCUgnOrezqQJ5LwGp5sVfSiONqzWI767anGCsW85ORsAJ_PC3s9y0fxN2qSsK182RX2eFqChPF7PC9dTwwhhzobsNjcSWp5D94Fjcc_YGtyT1MVnXPaXZqtZcv2x53Wj8\", \"Content-Type\": \"application/json\", \"X-Utm-Message-Signature\": \"utm-message-signature=:J4a7+WpCuMVfgiDCngJrB3fNv04Ij4uVePXS16bG7svGQ/e5yNh8dF0tUfptvi3vMxsIBRGK8GAAY/Bz5oXBdD8c4mbJfthYpMhY2H1sN6ND50T+fadosMZiFECKu5kwzeGbjBc1Gl92xZb9/2OpWsRCCrNvW6K5g23T+TwF5CyOhzBfCfyE7+5wXptIJV6jFmCH9ejFwYkexUJFK3HtWDv18RF2naFoYMHDPdOYW8ibw9CLSLkUZzZ12xvYwVVJaSaF5L6MG2oXUfhZkLB9aw6WQbBBtAvTC+7dOVEfz7piXS34TUZ2O8B/7MSUjlFbSHedN0OwIAU9imcDezweEg==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776013\", \"Content-Digest\": \"sha-512=:BIorF+4gt4MuPO6q8Bt0DW/UDS/KidPGbZ09a+/4eOjkIs2K0fXJ0a7AK67xaYHzEv+Wf/Jb2QB/qwp6oNKO+g==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"13d76c59-fcba-4de6-9d72-784d85903a22\\\", x5u=\\\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\\\"\", \"Content-Length\": \"164\", \"Host\": \"host.docker.internal:8074\", \"Connection\": \"Keep-Alive\", \"Accept-Encoding\": \"gzip\", \"User-Agent\": \"okhttp/4.10.0\"}",
+                        "body": "{\"operational_intent_id\":\"6691f41f-49b5-4d21-9a0d-66a9055c8965\",\"subscriptions\":[{\"subscription_id\":\"d07a16ae-708a-484b-84d4-d2cd45e360fe\",\"notification_index\":2}]}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "json": null,
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776013\", \"x-utm-message-signature\": \"utm-message-signature=:nssWgf2lXvyMUXDj3Ucsv3a4lVCFnZ+OkFJGt8SS2gmiUZIHwE7up4XxFZYec3pIwkqqT/VWEqt12MRHjtEXmsiwisakwxr/PZZ49stEDRxdGqAKX5N9/LHUPeY6F0iBCHP1FaTuXzUr/K1zxoGJ5Ao4KVjnjVaoe+YGoxCD4EIDCYAFxkz7U7VZYF6gXeX6WlyG9cYG2e22xd3HZQgfcWbd3jee++fV99VzgwmoWKb8aW4v5OeGT4yT84c+Yjg746I8mlXOyirHqTZXxKUREOFtiQqh9f9c+xL8KMUAnZHgl0sGJzbZxtdh3sYSwlIjQrSqnNGD11yQSartlHi+Bw==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming POST request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents should be valid."
+                }
+            },
+            {
+                "interaction_id": "0242dbf0-4788-48ce-ba40-5cd6c5182391",
+                "purpose": "Checking that the message signing headers in the incoming GET request to the mock uss endpoint /mock/scd/uss/v1/operational_intents/306d554c-0002-438b-a9ed-b4a44bc88cdb are valid.",
+                "query": {
+                    "request": {
+                        "method": "GET",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents/306d554c-0002-438b-a9ed-b4a44bc88cdb",
+                        "initiated_at": "2023-01-03T20:00:14.732420",
+                        "headers": "{\"Host\": \"host.docker.internal:8074\", \"User-Agent\": \"python-requests/2.25.1\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept\": \"*/*\", \"Connection\": \"keep-alive\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.O567K4xV70M9N0NNvO8t7jV8mk0B13yQ7hu5ei6y3SnHseWBorSvXEhHK3g3CYtoOUJDm_-emnI5mxqR-DTOjZp4nf63wl9aM_QerFefyi16lC5d46QdWecxgBg8ZpSD-DyOS1TKwQZcOQoGdRFDNRCdyCKA9iGidPy1477cuKw\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776014\", \"X-Utm-Message-Signature\": \"utm-message-signature=:yUidBq0p2ji7aNXp45PkBxPlEY8IVM/huOn671dNJx2c7li2rPisppTfAw0226aSrUjVhJtz9rXDyZAGGTFFNkYUWVQ2ostntw/TWYkPiMXyAy66VZTog3FXoYQRPOfmxN1sa6DTlOk3Vg4L3c13JQjVBJZa22ruFhoBV7fVeD8EsY83fiyjL6Hswm1VoIXqYjZuS5X0sDazAws40eRNgvQXq2a+Jd5TDlJ6HflS8gCx6a89Tp9BLWDSiV2aB/9BOI1+5EgNCLB36y95xQKX7su/m36fzDyUy/u/fzcKkavPef/ICXcuj0uUNsoMhVxRr8SzGMFSMpBn807tiv0oQQ==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"Content-Digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}",
+                        "body": ""
+                    },
+                    "response": {
+                        "code": 200,
+                        "json": {
+                            "operational_intent": {
+                                "reference": {
+                                    "id": "306d554c-0002-438b-a9ed-b4a44bc88cdb",
+                                    "manager": "mock-uss.interuss.com",
+                                    "ovn": "J3us2ML9kGxkO6Ry46AIhzgZb-OsDqqDts.Zc9O0vg8_",
+                                    "state": "Accepted",
+                                    "subscription_id": "156b0486-1090-4dc0-bc40-75139bc3746d",
+                                    "time_end": {
+                                        "format": "RFC3339",
+                                        "value": "2023-01-03T20:13:10.200000Z"
+                                    },
+                                    "time_start": {
+                                        "format": "RFC3339",
+                                        "value": "2023-01-03T20:08:10.200000Z"
+                                    },
+                                    "uss_availability": "Unknown",
+                                    "uss_base_url": "http://host.docker.internal:8074/mock/scd",
+                                    "version": 1
+                                },
+                                "details": {
+                                    "volumes": [
+                                        {
+                                            "volume": {
+                                                "outline_polygon": {
+                                                    "vertices": [
+                                                        {
+                                                            "lat": 7.477423822749622,
+                                                            "lng": 46.97491999984008
+                                                        },
+                                                        {
+                                                            "lat": 7.477423821039847,
+                                                            "lng": 46.97538499982026
+                                                        },
+                                                        {
+                                                            "lat": 7.477424770457274,
+                                                            "lng": 46.97539822817162
+                                                        },
+                                                        {
+                                                            "lat": 7.477427609667229,
+                                                            "lng": 46.975411329130466
+                                                        },
+                                                        {
+                                                            "lat": 7.477432311328011,
+                                                            "lng": 46.975424176527724
+                                                        },
+                                                        {
+                                                            "lat": 7.477438830161459,
+                                                            "lng": 46.97543664663613
+                                                        },
+                                                        {
+                                                            "lat": 7.477447103388957,
+                                                            "lng": 46.975448619361856
+                                                        },
+                                                        {
+                                                            "lat": 7.477457051335981,
+                                                            "lng": 46.975459979401066
+                                                        },
+                                                        {
+                                                            "lat": 7.477468578199379,
+                                                            "lng": 46.97547061735031
+                                                        },
+                                                        {
+                                                            "lat": 7.477481572969964,
+                                                            "lng": 46.97548043076024
+                                                        },
+                                                        {
+                                                            "lat": 7.4774959105015855,
+                                                            "lng": 46.97548932512221
+                                                        },
+                                                        {
+                                                            "lat": 7.477511452716338,
+                                                            "lng": 46.97549721477847
+                                                        },
+                                                        {
+                                                            "lat": 7.47752804993433,
+                                                            "lng": 46.97550402374711
+                                                        },
+                                                        {
+                                                            "lat": 7.477545542315188,
+                                                            "lng": 46.975509686453854
+                                                        },
+                                                        {
+                                                            "lat": 7.477563761397435,
+                                                            "lng": 46.97551414836356
+                                                        },
+                                                        {
+                                                            "lat": 7.477582531720886,
+                                                            "lng": 46.9755173665054
+                                                        },
+                                                        {
+                                                            "lat": 7.477601672516463,
+                                                            "lng": 46.975519309886806
+                                                        },
+                                                        {
+                                                            "lat": 7.477620999447144,
+                                                            "lng": 46.97551995979184
+                                                        },
+                                                        {
+                                                            "lat": 7.478057000544437,
+                                                            "lng": 46.97551995980457
+                                                        },
+                                                        {
+                                                            "lat": 7.478076327475301,
+                                                            "lng": 46.975519309900726
+                                                        },
+                                                        {
+                                                            "lat": 7.478095468271412,
+                                                            "lng": 46.97551736652059
+                                                        },
+                                                        {
+                                                            "lat": 7.478114238595763,
+                                                            "lng": 46.97551414838003
+                                                        },
+                                                        {
+                                                            "lat": 7.478132457679282,
+                                                            "lng": 46.97550968647161
+                                                        },
+                                                        {
+                                                            "lat": 7.478149950061773,
+                                                            "lng": 46.97550402376608
+                                                        },
+                                                        {
+                                                            "lat": 7.478166547281737,
+                                                            "lng": 46.97549721479852
+                                                        },
+                                                        {
+                                                            "lat": 7.4781820894987705,
+                                                            "lng": 46.97548932514323
+                                                        },
+                                                        {
+                                                            "lat": 7.478196427032943,
+                                                            "lng": 46.97548043078203
+                                                        },
+                                                        {
+                                                            "lat": 7.478209421806301,
+                                                            "lng": 46.97547061737267
+                                                        },
+                                                        {
+                                                            "lat": 7.478220948672645,
+                                                            "lng": 46.975459979423775
+                                                        },
+                                                        {
+                                                            "lat": 7.478230896622737,
+                                                            "lng": 46.97544861938469
+                                                        },
+                                                        {
+                                                            "lat": 7.4782391698533655,
+                                                            "lng": 46.97543664665883
+                                                        },
+                                                        {
+                                                            "lat": 7.4782456886899595,
+                                                            "lng": 46.975424176550064
+                                                        },
+                                                        {
+                                                            "lat": 7.4782503903538515,
+                                                            "lng": 46.97541132915219
+                                                        },
+                                                        {
+                                                            "lat": 7.478253229566841,
+                                                            "lng": 46.97539822819251
+                                                        },
+                                                        {
+                                                            "lat": 7.478254178987183,
+                                                            "lng": 46.975384999840095
+                                                        },
+                                                        {
+                                                            "lat": 7.478254177277408,
+                                                            "lng": 46.974919999820244
+                                                        },
+                                                        {
+                                                            "lat": 7.478253227761765,
+                                                            "lng": 46.97490677142331
+                                                        },
+                                                        {
+                                                            "lat": 7.4782503884602685,
+                                                            "lng": 46.97489367042681
+                                                        },
+                                                        {
+                                                            "lat": 7.4782456867183855,
+                                                            "lng": 46.97488082300081
+                                                        },
+                                                        {
+                                                            "lat": 7.478239167817867,
+                                                            "lng": 46.974868352873266
+                                                        },
+                                                        {
+                                                            "lat": 7.478230894540598,
+                                                            "lng": 46.974856380138455
+                                                        },
+                                                        {
+                                                            "lat": 7.478220946563947,
+                                                            "lng": 46.974845020100375
+                                                        },
+                                                        {
+                                                            "lat": 7.478209419693374,
+                                                            "lng": 46.974834382162385
+                                                        },
+                                                        {
+                                                            "lat": 7.47819642493976,
+                                                            "lng": 46.974824568773556
+                                                        },
+                                                        {
+                                                            "lat": 7.4781820874502785,
+                                                            "lng": 46.97481567444202
+                                                        },
+                                                        {
+                                                            "lat": 7.478166545303149,
+                                                            "lng": 46.97480778482489
+                                                        },
+                                                        {
+                                                            "lat": 7.478149948177879,
+                                                            "lng": 46.9748009759033
+                                                        },
+                                                        {
+                                                            "lat": 7.4781324559137685,
+                                                            "lng": 46.97479531325065
+                                                        },
+                                                        {
+                                                            "lat": 7.478114236970597,
+                                                            "lng": 46.97479085140123
+                                                        },
+                                                        {
+                                                            "lat": 7.478095466806278,
+                                                            "lng": 46.9747876333249
+                                                        },
+                                                        {
+                                                            "lat": 7.478076326187155,
+                                                            "lng": 46.97478569001336
+                                                        },
+                                                        {
+                                                            "lat": 7.478056999447158,
+                                                            "lng": 46.974785040181715
+                                                        },
+                                                        {
+                                                            "lat": 7.477621000544429,
+                                                            "lng": 46.97478504019445
+                                                        },
+                                                        {
+                                                            "lat": 7.477601673804613,
+                                                            "lng": 46.974785690027296
+                                                        },
+                                                        {
+                                                            "lat": 7.477582533186026,
+                                                            "lng": 46.974787633340085
+                                                        },
+                                                        {
+                                                            "lat": 7.477563763022608,
+                                                            "lng": 46.97479085141769
+                                                        }
+                                                    ]
+                                                },
+                                                "altitude_lower": {
+                                                    "value": 605.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                },
+                                                "altitude_upper": {
+                                                    "value": 635.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                }
+                                            },
+                                            "time_start": {
+                                                "value": "2023-01-03T20:08:10.200000Z",
+                                                "format": "RFC3339"
+                                            },
+                                            "time_end": {
+                                                "value": "2023-01-03T20:13:10.200000Z",
+                                                "format": "RFC3339"
+                                            }
+                                        }
+                                    ],
+                                    "off_nominal_volumes": [],
+                                    "priority": 0
+                                }
+                            }
+                        },
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3687\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776014\", \"x-utm-message-signature\": \"utm-message-signature=:cuARMguKdenatgs+KY1dA23wfqlWxKtUQI0/c2Z9+ywFfXmku3CqxkI0nIXcTFteim7mLLvR+FAmUhIa0J32MixtMjYC0p9Qb68KzvV/PsCg+TVVqEaSYVqPH1c4BY423yYnE+76UPnlLVkGjSWMr2A+/88le27qGHzFz8hpywQHmL6WAZ8AspqIbpd/Depg+35MZfRZ3NTXvevaH9B7/w9ChZi8+c5MvObHJIYoKWn+e6GLlkWOY7ab+Wfargl2JIGdQGVq7DKK9XoNVui+gi4gFd+/cuj73sUXpYytM6hloi/bD3FZzZcXCvrMduZkCra5HK4Eex7wlObGC+0btw==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:HLw4MTAO3OhGLkkHyYzr/rOmLX3YziZ2+XEUai7XSEpeTuwAyVuEh6ytAMsJhRmCmeu6ZbL0OqsboN9ObYYQaA==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming GET request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents/306d554c-0002-438b-a9ed-b4a44bc88cdb should be valid."
+                }
+            },
+            {
+                "interaction_id": "484c0d04-bccf-44ba-b6de-b5cc092778c6",
+                "purpose": "Checking that the message signing headers in the incoming POST request to the mock uss endpoint /mock/scd/uss/v1/operational_intents are valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents",
+                        "initiated_at": "2023-01-03T20:00:15.901365",
+                        "headers": "{\"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiaHR0cDovL29hdXRoLmRzcy5kZXZjbHVzdGVyLmxvY2FsIiwic2NvcGUiOiJ1dG0uc3RyYXRlZ2ljX2Nvb3JkaW5hdGlvbiIsInN1YiI6InVzcy51ZnQuYXhlbnRlcnByaXplLmNvbSJ9.PzDqsNwyOIxGQH1LvxpCOCrZ4GvvWdxiNv2TDkV3gSHCUgnOrezqQJ5LwGp5sVfSiONqzWI767anGCsW85ORsAJ_PC3s9y0fxN2qSsK182RX2eFqChPF7PC9dTwwhhzobsNjcSWp5D94Fjcc_YGtyT1MVnXPaXZqtZcv2x53Wj8\", \"Content-Type\": \"application/json\", \"X-Utm-Message-Signature\": \"utm-message-signature=:YiAfOt4ud9VWguINzBgLAd8JFt5aWiQYcxeV7bQN0ydPVBbhOVXpx2LZNZCzrPteMl//YYWyiiD/prEzMu3CIHfJC2RzlmkubDlWPjZIWmsH9qbHr9SWu5idOnpuJteVvkfRyU3D6bBNCa2xq7FXU8mTzfUkhUYudfnRNHtaT4JBmBZFODq3lGhKbS1hiTJilKMH2DVpGfO+c2F02RcjVv2sUnB8PALS6K+9huES2NkyNKl47eCxspeMNTZLGiIciPy4cO8dMj3XeryiQfEcFYJVtaHh+6qNHpy0L3fIP6HZeqaHdqoxVCU6TLP84Lvt4C/Y62GsvDAkgMxlrDwmlA==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776015\", \"Content-Digest\": \"sha-512=:VGoQbrYqxZtcD1CAb7WW1VQqnHojPXe1kLcQtTK6LgVuuGrKZWihOYw/td6x2NJFN0Jlnsilqen4Fabz3wVlHQ==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"13d76c59-fcba-4de6-9d72-784d85903a22\\\", x5u=\\\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\\\"\", \"Content-Length\": \"3894\", \"Host\": \"host.docker.internal:8074\", \"Connection\": \"Keep-Alive\", \"Accept-Encoding\": \"gzip\", \"User-Agent\": \"okhttp/4.10.0\"}",
+                        "body": "{\"operational_intent_id\":\"a44c47f6-e810-47be-8b52-c71541a456e9\",\"operational_intent\":{\"reference\":{\"id\":\"a44c47f6-e810-47be-8b52-c71541a456e9\",\"manager\":\"uss.uft.axenterprize.com\",\"uss_availability\":\"Unknown\",\"version\":1,\"state\":\"Accepted\",\"ovn\":\"pSZgvuTUSBuufVMYtM-Fl9FWZDHQe4SPoLbmHqzANn0_\",\"time_start\":{\"value\":\"2023-01-03T20:08:10.414Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-01-03T20:13:10.414Z\",\"format\":\"RFC3339\"},\"uss_base_url\":\"http://host.docker.internal:8090\",\"subscription_id\":\"a3214f38-927e-44ac-a257-81c07535cf43\"},\"details\":{\"volumes\":[{\"volume\":{\"outline_polygon\":{\"vertices\":[{\"lng\":46.97491999984008,\"lat\":7.477423822749622},{\"lng\":46.97538499982026,\"lat\":7.477423821039847},{\"lng\":46.97539822817162,\"lat\":7.477424770457274},{\"lng\":46.975411329130466,\"lat\":7.477427609667229},{\"lng\":46.975424176527724,\"lat\":7.477432311328011},{\"lng\":46.97543664663613,\"lat\":7.477438830161459},{\"lng\":46.975448619361856,\"lat\":7.477447103388957},{\"lng\":46.975459979401066,\"lat\":7.477457051335981},{\"lng\":46.97547061735031,\"lat\":7.477468578199379},{\"lng\":46.97548043076024,\"lat\":7.477481572969964},{\"lng\":46.97548932512221,\"lat\":7.4774959105015855},{\"lng\":46.97549721477847,\"lat\":7.477511452716338},{\"lng\":46.97550402374711,\"lat\":7.47752804993433},{\"lng\":46.975509686453854,\"lat\":7.477545542315188},{\"lng\":46.97551414836356,\"lat\":7.477563761397435},{\"lng\":46.9755173665054,\"lat\":7.477582531720886},{\"lng\":46.975519309886806,\"lat\":7.477601672516463},{\"lng\":46.97551995979184,\"lat\":7.477620999447144},{\"lng\":46.97551995980457,\"lat\":7.478057000544437},{\"lng\":46.975519309900726,\"lat\":7.478076327475301},{\"lng\":46.97551736652059,\"lat\":7.478095468271412},{\"lng\":46.97551414838003,\"lat\":7.478114238595763},{\"lng\":46.97550968647161,\"lat\":7.478132457679282},{\"lng\":46.97550402376608,\"lat\":7.478149950061773},{\"lng\":46.97549721479852,\"lat\":7.478166547281737},{\"lng\":46.97548932514323,\"lat\":7.4781820894987705},{\"lng\":46.97548043078203,\"lat\":7.478196427032943},{\"lng\":46.97547061737267,\"lat\":7.478209421806301},{\"lng\":46.975459979423775,\"lat\":7.478220948672645},{\"lng\":46.97544861938469,\"lat\":7.478230896622737},{\"lng\":46.97543664665883,\"lat\":7.4782391698533655},{\"lng\":46.975424176550064,\"lat\":7.4782456886899595},{\"lng\":46.97541132915219,\"lat\":7.4782503903538515},{\"lng\":46.97539822819251,\"lat\":7.478253229566841},{\"lng\":46.975384999840095,\"lat\":7.478254178987183},{\"lng\":46.974919999820244,\"lat\":7.478254177277408},{\"lng\":46.97490677142331,\"lat\":7.478253227761765},{\"lng\":46.97489367042681,\"lat\":7.4782503884602685},{\"lng\":46.97488082300081,\"lat\":7.4782456867183855},{\"lng\":46.974868352873266,\"lat\":7.478239167817867},{\"lng\":46.974856380138455,\"lat\":7.478230894540598},{\"lng\":46.974845020100375,\"lat\":7.478220946563947},{\"lng\":46.974834382162385,\"lat\":7.478209419693374},{\"lng\":46.974824568773556,\"lat\":7.47819642493976},{\"lng\":46.97481567444202,\"lat\":7.4781820874502785},{\"lng\":46.97480778482489,\"lat\":7.478166545303149},{\"lng\":46.9748009759033,\"lat\":7.478149948177879},{\"lng\":46.97479531325065,\"lat\":7.4781324559137685},{\"lng\":46.97479085140123,\"lat\":7.478114236970597},{\"lng\":46.9747876333249,\"lat\":7.478095466806278},{\"lng\":46.97478569001336,\"lat\":7.478076326187155},{\"lng\":46.974785040181715,\"lat\":7.478056999447158},{\"lng\":46.97478504019445,\"lat\":7.477621000544429},{\"lng\":46.974785690027296,\"lat\":7.477601673804613}]},\"altitude_lower\":{\"value\":605.0,\"reference\":\"W84\",\"units\":\"M\"},\"altitude_upper\":{\"value\":635.0,\"reference\":\"W84\",\"units\":\"M\"}},\"time_start\":{\"value\":\"2023-01-03T20:08:10.414Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-01-03T20:13:10.414Z\",\"format\":\"RFC3339\"}}],\"off_nominal_volumes\":[],\"priority\":0}},\"subscriptions\":[{\"subscription_id\":\"2690503a-060a-43ee-bbf1-0a3c56d780a5\",\"notification_index\":3},{\"subscription_id\":\"5048a07e-b5f4-4006-b1c9-7f362523e167\",\"notification_index\":1},{\"subscription_id\":\"d07a16ae-708a-484b-84d4-d2cd45e360fe\",\"notification_index\":5}]}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "json": null,
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776015\", \"x-utm-message-signature\": \"utm-message-signature=:QXmui2QMnZmwLhIOlfR3dYQs/bX5liIakQhIh9OjNIWv9LIjTEIivLoEBCKfC9549sUm+66Mihp3zQz3FE8U2pdVGXFRIjI+rHgNzAJpoFhI2GWKjbV5eGPlwmUVWTZO+wSlxbq53fTLOJ2lF102VmV2VyO9QL1LTFe2Q4h5gbOZiiE0mAkMKLxR+ore+tEehW+oqqUo6U2SjReft8GkcqtahBNYe+k7oIw2LkUcF3kidTRUoh7pQ94aINi2upMwhd2esJLnvNj5KGrZeMsVLzzMoTsZgNhrznjBOOV4vVD+kUh15dFYKjKInRLSYxMDym3i7OWdcx6fjy1sMC248Q==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming POST request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents should be valid."
+                }
+            },
+            {
+                "interaction_id": "a9cb6c25-4589-43ac-9f0b-a2f5fc933c1a",
+                "purpose": "Message signing headers in the response from the outgoing GET request to http://host.docker.internal:8090/uss/v1/operational_intents/a44c47f6-e810-47be-8b52-c71541a456e9 should be valid.",
+                "query": {
+                    "request": {
+                        "method": "GET",
+                        "url": "http://host.docker.internal:8090/uss/v1/operational_intents/a44c47f6-e810-47be-8b52-c71541a456e9",
+                        "headers": "{\"User-Agent\": \"python-requests/2.25.1\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept\": \"*/*\", \"Connection\": \"keep-alive\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTE3MCwiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.ZHtgGkuz4k6kscMxiJ2bAw12w9Xw7YHpMnaid9yqlNMcz5pLxVwCez5nHqKYzkaylFOjUYrlRH6_4X4cXIQRYDqpqzl4b8uslolV7JWRUJ3uYJGeMik95zdS_ov9WxfJ7p6cHgkbdjK-zvm8z_PU5rMh1giNKpAnCqitFJ63hLE\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776016\", \"x-utm-message-signature\": \"utm-message-signature=:gBWetQBR7p+xzKdCQ0JYjYqb0uLhTAEo6ELB6xPFhED7vs0+I0y7wpHMBAHD+LyVMLWA2oRgx5iELuXrQ7X9MbQsbXtKSQIJ46q/sqrWs8npUb06uKazvhN1kR2y7o02lCjDzt5vGBb8agTjrDF03ym9aE4lCrh1/b/J40K1y2UbdNTVKCwKTWzshkZaiNXdxiq7NytH3DHHFkKzCG3Uk3zh3Ag/K8v8on0mUXvfpj7jc4EGQjajw3Ue2KY1tfGnIw3bx5+K7HfNyQpGd75QT5QmFOugjIu8KLEQDrY7E+VIwvtbLPIQJ84dKOEN4XphEUa6ufwxKJ4SifIhESFuCg==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}",
+                        "body": null
+                    },
+                    "response": {
+                        "code": 200,
+                        "headers": "{'content-digest': 'sha-512=:fyT/NuIoIhKDLw5CpP9+zq2GBvAWGb8VSyJvQWwzSc6rk3Lsbc8fhaXQeGC5uZmDx7dF4OoLMfl6D2aiq16LPA==:', 'x-utm-jws-header': 'alg=\"RS256\", typ=\"JOSE\", kid=\"13d76c59-fcba-4de6-9d72-784d85903a22\", x5u=\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\"', 'x-utm-message-signature': 'utm-message-signature=:ohZC4H5YbOug4T8qehZbRSBXMGx3eO4K+LLyr7uhfAdsnS87DpLSZtrln8F0C9g4rnAWumRrCMX/EuUbP6NS9sIOAheYxR/T9xgK6N6tI+PMZWj5BhylzWw+g95wvsqyj2WcRqTdM7wkA5tb+aR/2oD/pE1obrVMFkWp//x6q+IZfHS5vSFrgWvLD1sK4xfPwR2w1gK2H0kg3Eq6C9y5JqxJhg835L4pe0CsVolvo76JE8PSNt09N8w5kFCwmZ3TiigIWtq14cERy+TeKgwPXpTXrX0InAZWcbCmWuICmnkoPr+GV5zklylXtS2ptEaSR/nmdLjU1o63KJieFZZNNA==:', 'x-utm-message-signature-input': 'utm-message-signature=(\"@status\" \"content-type\" \"content-digest\" \"x-utm-jws-header\");created=1672776016', 'Content-Type': 'application/json', 'Content-Length': '3567', 'Date': 'Tue, 03 Jan 2023 20:00:15 GMT', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'}",
+                        "json": {
+                            "operational_intent": {
+                                "reference": {
+                                    "id": "a44c47f6-e810-47be-8b52-c71541a456e9",
+                                    "manager": "uss.uft.axenterprize.com",
+                                    "uss_availability": "Unknown",
+                                    "version": 1,
+                                    "state": "Accepted",
+                                    "ovn": "pSZgvuTUSBuufVMYtM-Fl9FWZDHQe4SPoLbmHqzANn0_",
+                                    "time_start": {
+                                        "value": "2023-01-03T20:08:10.414Z",
+                                        "format": "RFC3339"
+                                    },
+                                    "time_end": {
+                                        "value": "2023-01-03T20:13:10.414Z",
+                                        "format": "RFC3339"
+                                    },
+                                    "uss_base_url": "http://host.docker.internal:8090",
+                                    "subscription_id": "a3214f38-927e-44ac-a257-81c07535cf43"
+                                },
+                                "details": {
+                                    "volumes": [
+                                        {
+                                            "volume": {
+                                                "outline_polygon": {
+                                                    "vertices": [
+                                                        {
+                                                            "lng": 46.97491999984008,
+                                                            "lat": 7.477423822749622
+                                                        },
+                                                        {
+                                                            "lng": 46.97538499982026,
+                                                            "lat": 7.477423821039847
+                                                        },
+                                                        {
+                                                            "lng": 46.97539822817162,
+                                                            "lat": 7.477424770457274
+                                                        },
+                                                        {
+                                                            "lng": 46.975411329130466,
+                                                            "lat": 7.477427609667229
+                                                        },
+                                                        {
+                                                            "lng": 46.975424176527724,
+                                                            "lat": 7.477432311328011
+                                                        },
+                                                        {
+                                                            "lng": 46.97543664663613,
+                                                            "lat": 7.477438830161459
+                                                        },
+                                                        {
+                                                            "lng": 46.975448619361856,
+                                                            "lat": 7.477447103388957
+                                                        },
+                                                        {
+                                                            "lng": 46.975459979401066,
+                                                            "lat": 7.477457051335981
+                                                        },
+                                                        {
+                                                            "lng": 46.97547061735031,
+                                                            "lat": 7.477468578199379
+                                                        },
+                                                        {
+                                                            "lng": 46.97548043076024,
+                                                            "lat": 7.477481572969964
+                                                        },
+                                                        {
+                                                            "lng": 46.97548932512221,
+                                                            "lat": 7.4774959105015855
+                                                        },
+                                                        {
+                                                            "lng": 46.97549721477847,
+                                                            "lat": 7.477511452716338
+                                                        },
+                                                        {
+                                                            "lng": 46.97550402374711,
+                                                            "lat": 7.47752804993433
+                                                        },
+                                                        {
+                                                            "lng": 46.975509686453854,
+                                                            "lat": 7.477545542315188
+                                                        },
+                                                        {
+                                                            "lng": 46.97551414836356,
+                                                            "lat": 7.477563761397435
+                                                        },
+                                                        {
+                                                            "lng": 46.9755173665054,
+                                                            "lat": 7.477582531720886
+                                                        },
+                                                        {
+                                                            "lng": 46.975519309886806,
+                                                            "lat": 7.477601672516463
+                                                        },
+                                                        {
+                                                            "lng": 46.97551995979184,
+                                                            "lat": 7.477620999447144
+                                                        },
+                                                        {
+                                                            "lng": 46.97551995980457,
+                                                            "lat": 7.478057000544437
+                                                        },
+                                                        {
+                                                            "lng": 46.975519309900726,
+                                                            "lat": 7.478076327475301
+                                                        },
+                                                        {
+                                                            "lng": 46.97551736652059,
+                                                            "lat": 7.478095468271412
+                                                        },
+                                                        {
+                                                            "lng": 46.97551414838003,
+                                                            "lat": 7.478114238595763
+                                                        },
+                                                        {
+                                                            "lng": 46.97550968647161,
+                                                            "lat": 7.478132457679282
+                                                        },
+                                                        {
+                                                            "lng": 46.97550402376608,
+                                                            "lat": 7.478149950061773
+                                                        },
+                                                        {
+                                                            "lng": 46.97549721479852,
+                                                            "lat": 7.478166547281737
+                                                        },
+                                                        {
+                                                            "lng": 46.97548932514323,
+                                                            "lat": 7.4781820894987705
+                                                        },
+                                                        {
+                                                            "lng": 46.97548043078203,
+                                                            "lat": 7.478196427032943
+                                                        },
+                                                        {
+                                                            "lng": 46.97547061737267,
+                                                            "lat": 7.478209421806301
+                                                        },
+                                                        {
+                                                            "lng": 46.975459979423775,
+                                                            "lat": 7.478220948672645
+                                                        },
+                                                        {
+                                                            "lng": 46.97544861938469,
+                                                            "lat": 7.478230896622737
+                                                        },
+                                                        {
+                                                            "lng": 46.97543664665883,
+                                                            "lat": 7.4782391698533655
+                                                        },
+                                                        {
+                                                            "lng": 46.975424176550064,
+                                                            "lat": 7.4782456886899595
+                                                        },
+                                                        {
+                                                            "lng": 46.97541132915219,
+                                                            "lat": 7.4782503903538515
+                                                        },
+                                                        {
+                                                            "lng": 46.97539822819251,
+                                                            "lat": 7.478253229566841
+                                                        },
+                                                        {
+                                                            "lng": 46.975384999840095,
+                                                            "lat": 7.478254178987183
+                                                        },
+                                                        {
+                                                            "lng": 46.974919999820244,
+                                                            "lat": 7.478254177277408
+                                                        },
+                                                        {
+                                                            "lng": 46.97490677142331,
+                                                            "lat": 7.478253227761765
+                                                        },
+                                                        {
+                                                            "lng": 46.97489367042681,
+                                                            "lat": 7.4782503884602685
+                                                        },
+                                                        {
+                                                            "lng": 46.97488082300081,
+                                                            "lat": 7.4782456867183855
+                                                        },
+                                                        {
+                                                            "lng": 46.974868352873266,
+                                                            "lat": 7.478239167817867
+                                                        },
+                                                        {
+                                                            "lng": 46.974856380138455,
+                                                            "lat": 7.478230894540598
+                                                        },
+                                                        {
+                                                            "lng": 46.974845020100375,
+                                                            "lat": 7.478220946563947
+                                                        },
+                                                        {
+                                                            "lng": 46.974834382162385,
+                                                            "lat": 7.478209419693374
+                                                        },
+                                                        {
+                                                            "lng": 46.974824568773556,
+                                                            "lat": 7.47819642493976
+                                                        },
+                                                        {
+                                                            "lng": 46.97481567444202,
+                                                            "lat": 7.4781820874502785
+                                                        },
+                                                        {
+                                                            "lng": 46.97480778482489,
+                                                            "lat": 7.478166545303149
+                                                        },
+                                                        {
+                                                            "lng": 46.9748009759033,
+                                                            "lat": 7.478149948177879
+                                                        },
+                                                        {
+                                                            "lng": 46.97479531325065,
+                                                            "lat": 7.4781324559137685
+                                                        },
+                                                        {
+                                                            "lng": 46.97479085140123,
+                                                            "lat": 7.478114236970597
+                                                        },
+                                                        {
+                                                            "lng": 46.9747876333249,
+                                                            "lat": 7.478095466806278
+                                                        },
+                                                        {
+                                                            "lng": 46.97478569001336,
+                                                            "lat": 7.478076326187155
+                                                        },
+                                                        {
+                                                            "lng": 46.974785040181715,
+                                                            "lat": 7.478056999447158
+                                                        },
+                                                        {
+                                                            "lng": 46.97478504019445,
+                                                            "lat": 7.477621000544429
+                                                        },
+                                                        {
+                                                            "lng": 46.974785690027296,
+                                                            "lat": 7.477601673804613
+                                                        }
+                                                    ]
+                                                },
+                                                "altitude_lower": {
+                                                    "value": 605.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                },
+                                                "altitude_upper": {
+                                                    "value": 635.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                }
+                                            },
+                                            "time_start": {
+                                                "value": "2023-01-03T20:08:10.414Z",
+                                                "format": "RFC3339"
+                                            },
+                                            "time_end": {
+                                                "value": "2023-01-03T20:13:10.414Z",
+                                                "format": "RFC3339"
+                                            }
+                                        }
+                                    ],
+                                    "off_nominal_volumes": [],
+                                    "priority": 0
+                                }
+                            }
+                        }
+                    }
+                },
+                "context": {
+                    "test_name": "Validating response signatures.",
+                    "test_case": "Message signing headers in the response from the outgoing GET request to http://host.docker.internal:8090/uss/v1/operational_intents/a44c47f6-e810-47be-8b52-c71541a456e9 should be valid."
+                }
+            },
+            {
+                "interaction_id": "aceee3a4-785a-4d5c-8cd6-06d0b44414e0",
+                "purpose": "Message signing headers in the response from the outgoing POST request to http://host.docker.internal:8090/uss/v1/operational_intents should be valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8090/uss/v1/operational_intents",
+                        "headers": "{\"User-Agent\": \"python-requests/2.25.1\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept\": \"*/*\", \"Connection\": \"keep-alive\", \"Content-Length\": \"4669\", \"Content-Type\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTE3MCwiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.ZHtgGkuz4k6kscMxiJ2bAw12w9Xw7YHpMnaid9yqlNMcz5pLxVwCez5nHqKYzkaylFOjUYrlRH6_4X4cXIQRYDqpqzl4b8uslolV7JWRUJ3uYJGeMik95zdS_ov9WxfJ7p6cHgkbdjK-zvm8z_PU5rMh1giNKpAnCqitFJ63hLE\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776016\", \"x-utm-message-signature\": \"utm-message-signature=:U1WYWP6t484JyVqjeW8tB/MSkPVNmnZPO2Uf+pUV7LokkKUSDnNPt74TryrazKQ1Wb5VYSBb2EVpKIHNjOR/ULK2uKtf4miAFot+CxASeKSx3MCIbm2ACYZwl8Atxxmlh/kgpv8OMrmFL0Sd0i4nAIyQFNj90DiTOSQ2dzq+cUHOQptum2WDYx9naLilRqo/xQTj6Ht3epb+kkd9KU/rPciTxZGKwZpaeojgYP+gemHUAkYTz5P+eFNUD/JqiLdDLUaUZaYuQRrB3nG75QBbWCx++sYpihUEknR+0WnGZ03Gd9SJVZcwTlgx7NXtL8vwg95srgR3tRj8a+cUDHPOKQ==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:SIOHy9lpLHHTpl0R8RbmICQFtwHz/l3GrATwiTYO3v4SkGaW+EkvaxfFP13l9iEViDe09GEtUTna4aUdIVF0xw==:\"}",
+                        "body": "{\"operational_intent_id\": \"8679064c-f9d0-4204-91b6-703c033ab1f6\", \"subscriptions\": [{\"notification_index\": 2, \"subscription_id\": \"a3214f38-927e-44ac-a257-81c07535cf43\"}], \"operational_intent\": {\"reference\": {\"id\": \"8679064c-f9d0-4204-91b6-703c033ab1f6\", \"manager\": \"mock-uss.interuss.com\", \"ovn\": \"LbQ-krpLeLqQBhGMCy9HoxvepH2rnOauGL.XgTAhELs_\", \"state\": \"Accepted\", \"subscription_id\": \"4b66fed5-1b4b-4843-971a-81eadf5b8b79\", \"time_end\": {\"format\": \"RFC3339\", \"value\": \"2023-01-03T20:13:10.414000Z\"}, \"time_start\": {\"format\": \"RFC3339\", \"value\": \"2023-01-03T20:08:10.414000Z\"}, \"uss_availability\": \"Unknown\", \"uss_base_url\": \"http://host.docker.internal:8074/mock/scd\", \"version\": 1}, \"details\": {\"volumes\": [{\"volume\": {\"outline_polygon\": {\"vertices\": [{\"lat\": 7.474315728091042, \"lng\": 46.97716400145211}, {\"lat\": 7.474303247689658, \"lng\": 46.97717412304557}, {\"lat\": 7.474292276891787, \"lng\": 46.9771850331586}, {\"lat\": 7.474282921352688, \"lng\": 46.97719662672131}, {\"lat\": 7.474275271172041, \"lng\": 46.97720879208173}, {\"lat\": 7.474269400026217, \"lng\": 46.97722141208117}, {\"lat\": 7.4742653644586845, \"lng\": 46.977234365182404}, {\"lat\": 7.474263203335437, \"lng\": 46.97724752664021}, {\"lat\": 7.474262937470636, \"lng\": 46.97726076970267}, {\"lat\": 7.474264569426098, \"lng\": 46.97727396683188}, {\"lat\": 7.47426808348659, \"lng\": 46.97728699093222}, {\"lat\": 7.474273445811106, \"lng\": 46.97729971657432}, {\"lat\": 7.474280604758724, \"lng\": 46.97731202120303}, {\"lat\": 7.4742894913859015, \"lng\": 46.97732378631779}, {\"lat\": 7.47430002011039, \"lng\": 46.977334898613684}, {\"lat\": 7.474312089535409, \"lng\": 46.97734525107282}, {\"lat\": 7.4743255834261335, \"lng\": 46.97735474399491}, {\"lat\": 7.47434037182908, \"lng\": 46.977363285957416}, {\"lat\": 7.474356312323634, \"lng\": 46.97737079469613}, {\"lat\": 7.47437325139364, \"lng\": 46.977377197897326}, {\"lat\": 7.474391025905868, \"lng\": 46.97738243389426}, {\"lat\": 7.474409464681103, \"lng\": 46.977386452261086}, {\"lat\": 7.474428390142731, \"lng\": 46.97738921429845}, {\"lat\": 7.4744476200269405, \"lng\": 46.97739069340619}, {\"lat\": 7.474466969138073, \"lng\": 46.97739087533958}, {\"lat\": 7.474486251132214, \"lng\": 46.97738975834647}, {\"lat\": 7.474505280311834, \"lng\": 46.97738735318418}, {\"lat\": 7.47452387341421, \"lng\": 46.97738368301589}, {\"lat\": 7.474541851376407, \"lng\": 46.97737878318756}, {\"lat\": 7.474559041059788, \"lng\": 46.97737270088755}, {\"lat\": 7.474575276917473, \"lng\": 46.9773654946921}, {\"lat\": 7.474590402588685, \"lng\": 46.977357234001225}, {\"lat\": 7.474604272404609, \"lng\": 46.97734799837037}, {\"lat\": 7.4780602717187445, \"lng\": 46.97480899404357}, {\"lat\": 7.478072750859629, \"lng\": 46.97479887202181}, {\"lat\": 7.47808372039712, \"lng\": 46.97478796152745}, {\"lat\": 7.478093074689058, \"lng\": 46.97477636763495}, {\"lat\": 7.478100723649223, \"lng\": 46.97476420200029}, {\"lat\": 7.478106593614889, \"lng\": 46.974751581785505}, {\"lat\": 7.478110628056212, \"lng\": 46.97473862853046}, {\"lat\": 7.4781127881205816, \"lng\": 46.9747254669823}, {\"lat\": 7.478113053006759, \"lng\": 46.97471222389403}, {\"lat\": 7.478111420165148, \"lng\": 46.974699026803876}, {\"lat\": 7.478107905322289, \"lng\": 46.97468600280696}, {\"lat\": 7.478102542329355, \"lng\": 46.974673277331334}, {\"lat\": 7.478095382836098, \"lng\": 46.97466097293006}, {\"lat\": 7.478086495793389, \"lng\": 46.9746492081009}, {\"lat\": 7.478075966789133, \"lng\": 46.97463809614524}, {\"lat\": 7.47806389722399, \"lng\": 46.97462774407688}, {\"lat\": 7.478050403334804, \"lng\": 46.97461825159139}, {\"lat\": 7.4780356150751714, \"lng\": 46.97460971010614}, {\"lat\": 7.478019674863899, \"lng\": 46.97460220187985}, {\"lat\": 7.478002736213457, \"lng\": 46.97459579922035}, {\"lat\": 7.477984962251586, \"lng\": 46.97459056378839}, {\"lat\": 7.477966524150307, \"lng\": 46.974586546003664}, {\"lat\": 7.477947599477487, \"lng\": 46.974583784559336}, {\"lat\": 7.477928370486799, \"lng\": 46.97458230604945}, {\"lat\": 7.477909022362576, \"lng\": 46.974582124712704}, {\"lat\": 7.4778897414364325, \"lng\": 46.97458324229544}, {\"lat\": 7.47787071339284, \"lng\": 46.974585648034825}, {\"lat\": 7.477852121480946, \"lng\": 46.974589318762405}, {\"lat\": 7.477834144749823, \"lng\": 46.974594219127326}, {\"lat\": 7.47781695632419, \"lng\": 46.97460030193667}, {\"lat\": 7.477800721737151, \"lng\": 46.97460750861006}, {\"lat\": 7.47778559733606, \"lng\": 46.974615769743735}, {\"lat\": 7.477771728776835, \"lng\": 46.97462500577891}]}, \"altitude_lower\": {\"value\": 605.0, \"reference\": \"W84\", \"units\": \"M\"}, \"altitude_upper\": {\"value\": 635.0, \"reference\": \"W84\", \"units\": \"M\"}}, \"time_start\": {\"value\": \"2023-01-03T20:08:10.414000Z\", \"format\": \"RFC3339\"}, \"time_end\": {\"value\": \"2023-01-03T20:13:10.414000Z\", \"format\": \"RFC3339\"}}], \"off_nominal_volumes\": [], \"priority\": 100}}}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "headers": "{'content-digest': 'sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:', 'x-utm-jws-header': 'alg=\"RS256\", typ=\"JOSE\", kid=\"13d76c59-fcba-4de6-9d72-784d85903a22\", x5u=\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\"', 'x-utm-message-signature': 'utm-message-signature=:LcMZDoQz/LD/XusUk1EJWRY3pjZxL42TkqYdUuKvFUSvKADjYSAZ517wmokZuHiaG3ccgzZu+7XC9Go0vEslkNgACc6P+fO0hKbjkywFA0rMa1RvhO9gVuqxZ9UXWEgrP7q+NUIg7NB0vim5J2uWpD4rJPotxFD7L7MTJFr0YiwHO/Qe8SZDNZWeIUNqDRZE/yJZBIJUHjN8DS1hrL+VkeVOpZxHOvOAHJsMGRTiGOncE0x+3mpkxN9tVEnXRfRAFHkINACHqxIznQUzk7am4lpMVVG/RnQCNV442wAucYxhoOfF08zz40UUnX+F5K0pH794+n/7cJw+DAnjQy0iew==:', 'x-utm-message-signature-input': 'utm-message-signature=(\"@status\" \"content-type\" \"content-digest\" \"x-utm-jws-header\");created=1672776016', 'Date': 'Tue, 03 Jan 2023 20:00:15 GMT', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'}",
+                        "json": null
+                    }
+                },
+                "context": {
+                    "test_name": "Validating response signatures.",
+                    "test_case": "Message signing headers in the response from the outgoing POST request to http://host.docker.internal:8090/uss/v1/operational_intents should be valid."
+                }
+            },
+            {
+                "interaction_id": "366fc797-7f06-49a5-8613-94d81487a08c",
+                "purpose": "Checking that the message signing headers in the incoming GET request to the mock uss endpoint /mock/scd/uss/v1/operational_intents/8679064c-f9d0-4204-91b6-703c033ab1f6 are valid.",
+                "query": {
+                    "request": {
+                        "method": "GET",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents/8679064c-f9d0-4204-91b6-703c033ab1f6",
+                        "initiated_at": "2023-01-03T20:00:16.848270",
+                        "headers": "{\"Host\": \"host.docker.internal:8074\", \"User-Agent\": \"python-requests/2.25.1\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept\": \"*/*\", \"Connection\": \"keep-alive\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.O567K4xV70M9N0NNvO8t7jV8mk0B13yQ7hu5ei6y3SnHseWBorSvXEhHK3g3CYtoOUJDm_-emnI5mxqR-DTOjZp4nf63wl9aM_QerFefyi16lC5d46QdWecxgBg8ZpSD-DyOS1TKwQZcOQoGdRFDNRCdyCKA9iGidPy1477cuKw\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776016\", \"X-Utm-Message-Signature\": \"utm-message-signature=:nuAON2EVtmSRFoBKhCUfUq4XMPtPAh39wcFjy0pcAZA3fTLVIo/R8kSNrln75yQ7tqhxs4gymkpI70PrWm7UgjiHg6S1LcIpnh/hfV1+wbNedQJuqNFD3ubNHKaSUe3DKc6+AwMo4WYipD+BRxNp5xNXMf7v0zSwvjV9mEO/5x+AyZIkI0jO7FKV09nxvSfJU+qD1jWCrCRXMRmMCmn9kVcs6ki+uS0tk60wLA5ndnh/awMg7NFKTV//cbXp0kKgq1Fk3iWhm6d3hQjeU3BIGJHVAtWGTd3rnKZTAM4H1IMnkF+hp+g2Nt5OSKXHMh1LOXridSLXR7ewhJtW/PwpkQ==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"Content-Digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}",
+                        "body": ""
+                    },
+                    "response": {
+                        "code": 200,
+                        "json": {
+                            "operational_intent": {
+                                "reference": {
+                                    "id": "8679064c-f9d0-4204-91b6-703c033ab1f6",
+                                    "manager": "mock-uss.interuss.com",
+                                    "ovn": "LbQ-krpLeLqQBhGMCy9HoxvepH2rnOauGL.XgTAhELs_",
+                                    "state": "Accepted",
+                                    "subscription_id": "4b66fed5-1b4b-4843-971a-81eadf5b8b79",
+                                    "time_end": {
+                                        "format": "RFC3339",
+                                        "value": "2023-01-03T20:13:10.414000Z"
+                                    },
+                                    "time_start": {
+                                        "format": "RFC3339",
+                                        "value": "2023-01-03T20:08:10.414000Z"
+                                    },
+                                    "uss_availability": "Unknown",
+                                    "uss_base_url": "http://host.docker.internal:8074/mock/scd",
+                                    "version": 1
+                                },
+                                "details": {
+                                    "volumes": [
+                                        {
+                                            "volume": {
+                                                "outline_polygon": {
+                                                    "vertices": [
+                                                        {
+                                                            "lat": 7.474315728091042,
+                                                            "lng": 46.97716400145211
+                                                        },
+                                                        {
+                                                            "lat": 7.474303247689658,
+                                                            "lng": 46.97717412304557
+                                                        },
+                                                        {
+                                                            "lat": 7.474292276891787,
+                                                            "lng": 46.9771850331586
+                                                        },
+                                                        {
+                                                            "lat": 7.474282921352688,
+                                                            "lng": 46.97719662672131
+                                                        },
+                                                        {
+                                                            "lat": 7.474275271172041,
+                                                            "lng": 46.97720879208173
+                                                        },
+                                                        {
+                                                            "lat": 7.474269400026217,
+                                                            "lng": 46.97722141208117
+                                                        },
+                                                        {
+                                                            "lat": 7.4742653644586845,
+                                                            "lng": 46.977234365182404
+                                                        },
+                                                        {
+                                                            "lat": 7.474263203335437,
+                                                            "lng": 46.97724752664021
+                                                        },
+                                                        {
+                                                            "lat": 7.474262937470636,
+                                                            "lng": 46.97726076970267
+                                                        },
+                                                        {
+                                                            "lat": 7.474264569426098,
+                                                            "lng": 46.97727396683188
+                                                        },
+                                                        {
+                                                            "lat": 7.47426808348659,
+                                                            "lng": 46.97728699093222
+                                                        },
+                                                        {
+                                                            "lat": 7.474273445811106,
+                                                            "lng": 46.97729971657432
+                                                        },
+                                                        {
+                                                            "lat": 7.474280604758724,
+                                                            "lng": 46.97731202120303
+                                                        },
+                                                        {
+                                                            "lat": 7.4742894913859015,
+                                                            "lng": 46.97732378631779
+                                                        },
+                                                        {
+                                                            "lat": 7.47430002011039,
+                                                            "lng": 46.977334898613684
+                                                        },
+                                                        {
+                                                            "lat": 7.474312089535409,
+                                                            "lng": 46.97734525107282
+                                                        },
+                                                        {
+                                                            "lat": 7.4743255834261335,
+                                                            "lng": 46.97735474399491
+                                                        },
+                                                        {
+                                                            "lat": 7.47434037182908,
+                                                            "lng": 46.977363285957416
+                                                        },
+                                                        {
+                                                            "lat": 7.474356312323634,
+                                                            "lng": 46.97737079469613
+                                                        },
+                                                        {
+                                                            "lat": 7.47437325139364,
+                                                            "lng": 46.977377197897326
+                                                        },
+                                                        {
+                                                            "lat": 7.474391025905868,
+                                                            "lng": 46.97738243389426
+                                                        },
+                                                        {
+                                                            "lat": 7.474409464681103,
+                                                            "lng": 46.977386452261086
+                                                        },
+                                                        {
+                                                            "lat": 7.474428390142731,
+                                                            "lng": 46.97738921429845
+                                                        },
+                                                        {
+                                                            "lat": 7.4744476200269405,
+                                                            "lng": 46.97739069340619
+                                                        },
+                                                        {
+                                                            "lat": 7.474466969138073,
+                                                            "lng": 46.97739087533958
+                                                        },
+                                                        {
+                                                            "lat": 7.474486251132214,
+                                                            "lng": 46.97738975834647
+                                                        },
+                                                        {
+                                                            "lat": 7.474505280311834,
+                                                            "lng": 46.97738735318418
+                                                        },
+                                                        {
+                                                            "lat": 7.47452387341421,
+                                                            "lng": 46.97738368301589
+                                                        },
+                                                        {
+                                                            "lat": 7.474541851376407,
+                                                            "lng": 46.97737878318756
+                                                        },
+                                                        {
+                                                            "lat": 7.474559041059788,
+                                                            "lng": 46.97737270088755
+                                                        },
+                                                        {
+                                                            "lat": 7.474575276917473,
+                                                            "lng": 46.9773654946921
+                                                        },
+                                                        {
+                                                            "lat": 7.474590402588685,
+                                                            "lng": 46.977357234001225
+                                                        },
+                                                        {
+                                                            "lat": 7.474604272404609,
+                                                            "lng": 46.97734799837037
+                                                        },
+                                                        {
+                                                            "lat": 7.4780602717187445,
+                                                            "lng": 46.97480899404357
+                                                        },
+                                                        {
+                                                            "lat": 7.478072750859629,
+                                                            "lng": 46.97479887202181
+                                                        },
+                                                        {
+                                                            "lat": 7.47808372039712,
+                                                            "lng": 46.97478796152745
+                                                        },
+                                                        {
+                                                            "lat": 7.478093074689058,
+                                                            "lng": 46.97477636763495
+                                                        },
+                                                        {
+                                                            "lat": 7.478100723649223,
+                                                            "lng": 46.97476420200029
+                                                        },
+                                                        {
+                                                            "lat": 7.478106593614889,
+                                                            "lng": 46.974751581785505
+                                                        },
+                                                        {
+                                                            "lat": 7.478110628056212,
+                                                            "lng": 46.97473862853046
+                                                        },
+                                                        {
+                                                            "lat": 7.4781127881205816,
+                                                            "lng": 46.9747254669823
+                                                        },
+                                                        {
+                                                            "lat": 7.478113053006759,
+                                                            "lng": 46.97471222389403
+                                                        },
+                                                        {
+                                                            "lat": 7.478111420165148,
+                                                            "lng": 46.974699026803876
+                                                        },
+                                                        {
+                                                            "lat": 7.478107905322289,
+                                                            "lng": 46.97468600280696
+                                                        },
+                                                        {
+                                                            "lat": 7.478102542329355,
+                                                            "lng": 46.974673277331334
+                                                        },
+                                                        {
+                                                            "lat": 7.478095382836098,
+                                                            "lng": 46.97466097293006
+                                                        },
+                                                        {
+                                                            "lat": 7.478086495793389,
+                                                            "lng": 46.9746492081009
+                                                        },
+                                                        {
+                                                            "lat": 7.478075966789133,
+                                                            "lng": 46.97463809614524
+                                                        },
+                                                        {
+                                                            "lat": 7.47806389722399,
+                                                            "lng": 46.97462774407688
+                                                        },
+                                                        {
+                                                            "lat": 7.478050403334804,
+                                                            "lng": 46.97461825159139
+                                                        },
+                                                        {
+                                                            "lat": 7.4780356150751714,
+                                                            "lng": 46.97460971010614
+                                                        },
+                                                        {
+                                                            "lat": 7.478019674863899,
+                                                            "lng": 46.97460220187985
+                                                        },
+                                                        {
+                                                            "lat": 7.478002736213457,
+                                                            "lng": 46.97459579922035
+                                                        },
+                                                        {
+                                                            "lat": 7.477984962251586,
+                                                            "lng": 46.97459056378839
+                                                        },
+                                                        {
+                                                            "lat": 7.477966524150307,
+                                                            "lng": 46.974586546003664
+                                                        },
+                                                        {
+                                                            "lat": 7.477947599477487,
+                                                            "lng": 46.974583784559336
+                                                        },
+                                                        {
+                                                            "lat": 7.477928370486799,
+                                                            "lng": 46.97458230604945
+                                                        },
+                                                        {
+                                                            "lat": 7.477909022362576,
+                                                            "lng": 46.974582124712704
+                                                        },
+                                                        {
+                                                            "lat": 7.4778897414364325,
+                                                            "lng": 46.97458324229544
+                                                        },
+                                                        {
+                                                            "lat": 7.47787071339284,
+                                                            "lng": 46.974585648034825
+                                                        },
+                                                        {
+                                                            "lat": 7.477852121480946,
+                                                            "lng": 46.974589318762405
+                                                        },
+                                                        {
+                                                            "lat": 7.477834144749823,
+                                                            "lng": 46.974594219127326
+                                                        },
+                                                        {
+                                                            "lat": 7.47781695632419,
+                                                            "lng": 46.97460030193667
+                                                        },
+                                                        {
+                                                            "lat": 7.477800721737151,
+                                                            "lng": 46.97460750861006
+                                                        },
+                                                        {
+                                                            "lat": 7.47778559733606,
+                                                            "lng": 46.974615769743735
+                                                        },
+                                                        {
+                                                            "lat": 7.477771728776835,
+                                                            "lng": 46.97462500577891
+                                                        }
+                                                    ]
+                                                },
+                                                "altitude_lower": {
+                                                    "value": 605.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                },
+                                                "altitude_upper": {
+                                                    "value": 635.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                }
+                                            },
+                                            "time_start": {
+                                                "value": "2023-01-03T20:08:10.414000Z",
+                                                "format": "RFC3339"
+                                            },
+                                            "time_end": {
+                                                "value": "2023-01-03T20:13:10.414000Z",
+                                                "format": "RFC3339"
+                                            }
+                                        }
+                                    ],
+                                    "off_nominal_volumes": [],
+                                    "priority": 100
+                                }
+                            }
+                        },
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"4176\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776016\", \"x-utm-message-signature\": \"utm-message-signature=:p/KU/nKrFehPILCT9c/N/Z+rykng3nY0nbp0jiqImbV4Cv8rKaOH/cf5xSUm9BAlC6OGqMV33OEZ+AYJXiynZHmE20YH2elmusMguMM2sa4s/0oEm27UarQHRNhpyF71ZaSp3wapAVVtQy5rcYi5jus9RzdEtzUJzevmSEs2313jltEaVp1BTu1YSxbFP/HuY4VE+m8ffDp1LhmCZ6V8gNkVhmVKna0jMXDxm8rBBUITES1voOFKWFbljhJQNsGxFDFXavmX1gtBuqvRHU0vgyHBxQEhJaPOGknSU9A5Q2MqXYeq8/vj9VgX9kH7TrJdDb0TG7/fUVhnL9Z4u5FKSA==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:yzR0/E/4eP2t5U6kIOtO8HGXH4MxsxQraW4/KLqtg1vzwp0aoKnaZF60FXdSqUqLIRsmH1bkTLmFlJZqsSZglQ==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming GET request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents/8679064c-f9d0-4204-91b6-703c033ab1f6 should be valid."
+                }
+            },
+            {
+                "interaction_id": "f017873d-8d66-4fad-b4c0-96ab36b0c81c",
+                "purpose": "Checking that the message signing headers in the incoming POST request to the mock uss endpoint /mock/scd/uss/v1/operational_intents are valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents",
+                        "initiated_at": "2023-01-03T20:00:17.386825",
+                        "headers": "{\"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiaHR0cDovL29hdXRoLmRzcy5kZXZjbHVzdGVyLmxvY2FsIiwic2NvcGUiOiJ1dG0uc3RyYXRlZ2ljX2Nvb3JkaW5hdGlvbiIsInN1YiI6InVzcy51ZnQuYXhlbnRlcnByaXplLmNvbSJ9.PzDqsNwyOIxGQH1LvxpCOCrZ4GvvWdxiNv2TDkV3gSHCUgnOrezqQJ5LwGp5sVfSiONqzWI767anGCsW85ORsAJ_PC3s9y0fxN2qSsK182RX2eFqChPF7PC9dTwwhhzobsNjcSWp5D94Fjcc_YGtyT1MVnXPaXZqtZcv2x53Wj8\", \"Content-Type\": \"application/json\", \"X-Utm-Message-Signature\": \"utm-message-signature=:KtnYQ639kQ6X/Ppfzdr1lmoH++ZTQ9Q9asdxvmifr02pJLmGTdUlH7rr41aSqVvcJILnRenJNdllRyzOotliVG6ETqnRJmilLvijI+iUTEFG/qSP/zprcNsAVvdpeGfXESgkqdkAiqqEUOrEO3KJjWaF/WYrFvDP7qguOxcWEvh4oyvOoqka2gFTe03QZEDmohZ6MCgwO4mZqtxt4QMKT8UzFTMGARnPPasWYsi/761V3RCVYIMKbiC5rcXf1r1eTFqYewcPG8vPJ/ptoMg+HdIBqj7ZqhrsL+enCpSwEZm6VearuWIy5woatQ275k3ZHImaXmBUziin8KMdWNKaHA==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776017\", \"Content-Digest\": \"sha-512=:7zFtBMPc6XAvco5TYLeGVrvkFFg4Lmy/71Y1BO/domXaag/FwAr2Fby9e8bHyD74vl4BSPDD34xOU3FCJ2qC6Q==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"13d76c59-fcba-4de6-9d72-784d85903a22\\\", x5u=\\\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\\\"\", \"Content-Length\": \"328\", \"Host\": \"host.docker.internal:8074\", \"Connection\": \"Keep-Alive\", \"Accept-Encoding\": \"gzip\", \"User-Agent\": \"okhttp/4.10.0\"}",
+                        "body": "{\"operational_intent_id\":\"a44c47f6-e810-47be-8b52-c71541a456e9\",\"subscriptions\":[{\"subscription_id\":\"2690503a-060a-43ee-bbf1-0a3c56d780a5\",\"notification_index\":6},{\"subscription_id\":\"5048a07e-b5f4-4006-b1c9-7f362523e167\",\"notification_index\":4},{\"subscription_id\":\"d07a16ae-708a-484b-84d4-d2cd45e360fe\",\"notification_index\":8}]}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "json": null,
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776017\", \"x-utm-message-signature\": \"utm-message-signature=:rsegrq0DLN+7Mx6Snq14PeS8DMRdhoE9qJkJGSJBH4vMEt6mpUI1QhrAU4wbn9+pZy51CxeYwKmIJXVkxkwm9ljqWczycmdGTyiQNrmco539aBd0M50ZgYXrHmfbHe7vipMNt9zD3tfp+Zclr5hqIFoGG6Pl16JDeGhRiGxXUJdSBAGSCO3sAE/Bbk57UGoWgcaEBsT/0mdL2vEvYhEI/J8Cv1BkgYOp5GzPZE14m7Z66zzZrmMAg3FyQqSSwp9/PZC8KKemBKaTz33p2kM0jo8J5WbehitA6RuHjfOEPi2lhlu5VqtrLaZiCGefAa8Nq7UfJpkdMoY01HD8CIqIRA==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming POST request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents should be valid."
+                }
+            },
+            {
+                "interaction_id": "a671d890-ea12-4228-971f-95a2cb56ba74",
+                "purpose": "Checking that the message signing headers in the incoming GET request to the mock uss endpoint /mock/scd/uss/v1/operational_intents/917d849c-7977-4057-bd92-fc90a4f9e2d8 are valid.",
+                "query": {
+                    "request": {
+                        "method": "GET",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents/917d849c-7977-4057-bd92-fc90a4f9e2d8",
+                        "initiated_at": "2023-01-03T20:00:18.462592",
+                        "headers": "{\"Host\": \"host.docker.internal:8074\", \"User-Agent\": \"python-requests/2.25.1\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept\": \"*/*\", \"Connection\": \"keep-alive\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.O567K4xV70M9N0NNvO8t7jV8mk0B13yQ7hu5ei6y3SnHseWBorSvXEhHK3g3CYtoOUJDm_-emnI5mxqR-DTOjZp4nf63wl9aM_QerFefyi16lC5d46QdWecxgBg8ZpSD-DyOS1TKwQZcOQoGdRFDNRCdyCKA9iGidPy1477cuKw\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776018\", \"X-Utm-Message-Signature\": \"utm-message-signature=:RcQQQHgWC82tkkVkS5QbxLGzDGWrxyIDG7T/8jyB94okS7ODIbEmhWUW/1ryOp96PxJJAQ0an9EbVf/9eL13+Id6xMprwGTk26Y350uR3IWYrTHHO1jro8cyUlDZFuPSg2lyFyL/Lr3PF6XGiShW9yxb9lzFb3g3v/erp4Wrl2iaKqcd10Pi4xUAEDCQlY6XMnslHFYtGZJXgZOxPAb6GLskd7bwfaHlVvt0JQRrcTmY9cgaiVwUa3aJJUA9Cj7Gt2eImcRTXfpiGlT5uNb1J7jr1eSThdEXBROdmCb2RgBuDK23f7Oe1ZNpYfXLyDhrVHL/gDtJxOnzf4mViy/eNA==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"Content-Digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}",
+                        "body": ""
+                    },
+                    "response": {
+                        "code": 200,
+                        "json": {
+                            "operational_intent": {
+                                "reference": {
+                                    "id": "917d849c-7977-4057-bd92-fc90a4f9e2d8",
+                                    "manager": "mock-uss.interuss.com",
+                                    "ovn": "GF8n.EbuQ-mFzkQXVDcC4LHbKmwKh2wS27R5gjcU.d4_",
+                                    "state": "Accepted",
+                                    "subscription_id": "3be0d3d2-38ca-416c-8ad1-cd04cdabd21e",
+                                    "time_end": {
+                                        "format": "RFC3339",
+                                        "value": "2023-01-03T20:13:10.600000Z"
+                                    },
+                                    "time_start": {
+                                        "format": "RFC3339",
+                                        "value": "2023-01-03T20:08:10.600000Z"
+                                    },
+                                    "uss_availability": "Unknown",
+                                    "uss_base_url": "http://host.docker.internal:8074/mock/scd",
+                                    "version": 1
+                                },
+                                "details": {
+                                    "volumes": [
+                                        {
+                                            "volume": {
+                                                "outline_polygon": {
+                                                    "vertices": [
+                                                        {
+                                                            "lat": 7.477423822749622,
+                                                            "lng": 46.97491999984008
+                                                        },
+                                                        {
+                                                            "lat": 7.477423821039847,
+                                                            "lng": 46.97538499982026
+                                                        },
+                                                        {
+                                                            "lat": 7.477424770457274,
+                                                            "lng": 46.97539822817162
+                                                        },
+                                                        {
+                                                            "lat": 7.477427609667229,
+                                                            "lng": 46.975411329130466
+                                                        },
+                                                        {
+                                                            "lat": 7.477432311328011,
+                                                            "lng": 46.975424176527724
+                                                        },
+                                                        {
+                                                            "lat": 7.477438830161459,
+                                                            "lng": 46.97543664663613
+                                                        },
+                                                        {
+                                                            "lat": 7.477447103388957,
+                                                            "lng": 46.975448619361856
+                                                        },
+                                                        {
+                                                            "lat": 7.477457051335981,
+                                                            "lng": 46.975459979401066
+                                                        },
+                                                        {
+                                                            "lat": 7.477468578199379,
+                                                            "lng": 46.97547061735031
+                                                        },
+                                                        {
+                                                            "lat": 7.477481572969964,
+                                                            "lng": 46.97548043076024
+                                                        },
+                                                        {
+                                                            "lat": 7.4774959105015855,
+                                                            "lng": 46.97548932512221
+                                                        },
+                                                        {
+                                                            "lat": 7.477511452716338,
+                                                            "lng": 46.97549721477847
+                                                        },
+                                                        {
+                                                            "lat": 7.47752804993433,
+                                                            "lng": 46.97550402374711
+                                                        },
+                                                        {
+                                                            "lat": 7.477545542315188,
+                                                            "lng": 46.975509686453854
+                                                        },
+                                                        {
+                                                            "lat": 7.477563761397435,
+                                                            "lng": 46.97551414836356
+                                                        },
+                                                        {
+                                                            "lat": 7.477582531720886,
+                                                            "lng": 46.9755173665054
+                                                        },
+                                                        {
+                                                            "lat": 7.477601672516463,
+                                                            "lng": 46.975519309886806
+                                                        },
+                                                        {
+                                                            "lat": 7.477620999447144,
+                                                            "lng": 46.97551995979184
+                                                        },
+                                                        {
+                                                            "lat": 7.478057000544437,
+                                                            "lng": 46.97551995980457
+                                                        },
+                                                        {
+                                                            "lat": 7.478076327475301,
+                                                            "lng": 46.975519309900726
+                                                        },
+                                                        {
+                                                            "lat": 7.478095468271412,
+                                                            "lng": 46.97551736652059
+                                                        },
+                                                        {
+                                                            "lat": 7.478114238595763,
+                                                            "lng": 46.97551414838003
+                                                        },
+                                                        {
+                                                            "lat": 7.478132457679282,
+                                                            "lng": 46.97550968647161
+                                                        },
+                                                        {
+                                                            "lat": 7.478149950061773,
+                                                            "lng": 46.97550402376608
+                                                        },
+                                                        {
+                                                            "lat": 7.478166547281737,
+                                                            "lng": 46.97549721479852
+                                                        },
+                                                        {
+                                                            "lat": 7.4781820894987705,
+                                                            "lng": 46.97548932514323
+                                                        },
+                                                        {
+                                                            "lat": 7.478196427032943,
+                                                            "lng": 46.97548043078203
+                                                        },
+                                                        {
+                                                            "lat": 7.478209421806301,
+                                                            "lng": 46.97547061737267
+                                                        },
+                                                        {
+                                                            "lat": 7.478220948672645,
+                                                            "lng": 46.975459979423775
+                                                        },
+                                                        {
+                                                            "lat": 7.478230896622737,
+                                                            "lng": 46.97544861938469
+                                                        },
+                                                        {
+                                                            "lat": 7.4782391698533655,
+                                                            "lng": 46.97543664665883
+                                                        },
+                                                        {
+                                                            "lat": 7.4782456886899595,
+                                                            "lng": 46.975424176550064
+                                                        },
+                                                        {
+                                                            "lat": 7.4782503903538515,
+                                                            "lng": 46.97541132915219
+                                                        },
+                                                        {
+                                                            "lat": 7.478253229566841,
+                                                            "lng": 46.97539822819251
+                                                        },
+                                                        {
+                                                            "lat": 7.478254178987183,
+                                                            "lng": 46.975384999840095
+                                                        },
+                                                        {
+                                                            "lat": 7.478254177277408,
+                                                            "lng": 46.974919999820244
+                                                        },
+                                                        {
+                                                            "lat": 7.478253227761765,
+                                                            "lng": 46.97490677142331
+                                                        },
+                                                        {
+                                                            "lat": 7.4782503884602685,
+                                                            "lng": 46.97489367042681
+                                                        },
+                                                        {
+                                                            "lat": 7.4782456867183855,
+                                                            "lng": 46.97488082300081
+                                                        },
+                                                        {
+                                                            "lat": 7.478239167817867,
+                                                            "lng": 46.974868352873266
+                                                        },
+                                                        {
+                                                            "lat": 7.478230894540598,
+                                                            "lng": 46.974856380138455
+                                                        },
+                                                        {
+                                                            "lat": 7.478220946563947,
+                                                            "lng": 46.974845020100375
+                                                        },
+                                                        {
+                                                            "lat": 7.478209419693374,
+                                                            "lng": 46.974834382162385
+                                                        },
+                                                        {
+                                                            "lat": 7.47819642493976,
+                                                            "lng": 46.974824568773556
+                                                        },
+                                                        {
+                                                            "lat": 7.4781820874502785,
+                                                            "lng": 46.97481567444202
+                                                        },
+                                                        {
+                                                            "lat": 7.478166545303149,
+                                                            "lng": 46.97480778482489
+                                                        },
+                                                        {
+                                                            "lat": 7.478149948177879,
+                                                            "lng": 46.9748009759033
+                                                        },
+                                                        {
+                                                            "lat": 7.4781324559137685,
+                                                            "lng": 46.97479531325065
+                                                        },
+                                                        {
+                                                            "lat": 7.478114236970597,
+                                                            "lng": 46.97479085140123
+                                                        },
+                                                        {
+                                                            "lat": 7.478095466806278,
+                                                            "lng": 46.9747876333249
+                                                        },
+                                                        {
+                                                            "lat": 7.478076326187155,
+                                                            "lng": 46.97478569001336
+                                                        },
+                                                        {
+                                                            "lat": 7.478056999447158,
+                                                            "lng": 46.974785040181715
+                                                        },
+                                                        {
+                                                            "lat": 7.477621000544429,
+                                                            "lng": 46.97478504019445
+                                                        },
+                                                        {
+                                                            "lat": 7.477601673804613,
+                                                            "lng": 46.974785690027296
+                                                        }
+                                                    ]
+                                                },
+                                                "altitude_lower": {
+                                                    "value": 605.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                },
+                                                "altitude_upper": {
+                                                    "value": 635.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                }
+                                            },
+                                            "time_start": {
+                                                "value": "2023-01-03T20:08:10.600000Z",
+                                                "format": "RFC3339"
+                                            },
+                                            "time_end": {
+                                                "value": "2023-01-03T20:13:10.600000Z",
+                                                "format": "RFC3339"
+                                            }
+                                        }
+                                    ],
+                                    "off_nominal_volumes": [],
+                                    "priority": 0
+                                }
+                            }
+                        },
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3586\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776018\", \"x-utm-message-signature\": \"utm-message-signature=:xuiQJfKa0E9t57LaK+jGor1c6U76fr8Xb9b2E1raetxiRzwHcJWB3eQMfuhUtxQahEtKKGpxHeWefNyugboFkOo/vUSJJORVMnOPtZSugm1Tz74CsSVtutFA2kyc+5yWjpsxcZew9I6waUbiWJyFNgJI9Su/AF7tbXOkW2aXYaPhRM0HjhAPx0Xmi3bXy2JX7pInxBhGBOpR2snr1a+zKTRVON78CGcbMneaMjU+jqT6V/TqWAKnUiNeRMsFRvNOZ7xPXZstazlHzhXYxRuV1MARarTcZHngoBDiGdsd+jDGF/OpYXXrUTNNOrVV9SBj0gnx+1z6DHIlTpR4bjGfCw==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:q97nQ4LKzrec70jT06xTOUOJJKWoRHcU01M9dipNN0LitcXPqBMEZPdmrNgv1fg579jFPDcAF9qscL6ttoVn7A==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming GET request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents/917d849c-7977-4057-bd92-fc90a4f9e2d8 should be valid."
+                }
+            },
+            {
+                "interaction_id": "c3156d60-fc62-460b-a118-f9a06fdfdaca",
+                "purpose": "Checking that the message signing headers in the incoming GET request to the mock uss endpoint /mock/scd/uss/v1/operational_intents/917d849c-7977-4057-bd92-fc90a4f9e2d8 are valid.",
+                "query": {
+                    "request": {
+                        "method": "GET",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents/917d849c-7977-4057-bd92-fc90a4f9e2d8",
+                        "initiated_at": "2023-01-03T20:00:18.714611",
+                        "headers": "{\"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiaHR0cDovL29hdXRoLmRzcy5kZXZjbHVzdGVyLmxvY2FsIiwic2NvcGUiOiJ1dG0uc3RyYXRlZ2ljX2Nvb3JkaW5hdGlvbiIsInN1YiI6InVzcy51ZnQuYXhlbnRlcnByaXplLmNvbSJ9.PzDqsNwyOIxGQH1LvxpCOCrZ4GvvWdxiNv2TDkV3gSHCUgnOrezqQJ5LwGp5sVfSiONqzWI767anGCsW85ORsAJ_PC3s9y0fxN2qSsK182RX2eFqChPF7PC9dTwwhhzobsNjcSWp5D94Fjcc_YGtyT1MVnXPaXZqtZcv2x53Wj8\", \"X-Utm-Message-Signature\": \"utm-message-signature=:OfT/V7RNo9ta9ckaH8PBqX6Edkz4LFzYH3kI/tMnZBcSBEF0TKO17weqBakmYVVqVrgZJ7+X4QRCuNwQGAAZ0M8KayVJeQPzjWjM0BTuAjl1S3B0ggXkDKSBJseMR9xHiSOuV3OD+H7/8rNPbrRSwfXKlvi7aHXJvQEcc7HKKeXh+2uj1BP8s1UFpLpiRObPS6vyafVfYp046RFFRMk3JKA+o+hoyZ/OdfjBkkVtRrg5IoxWdw/lmiYLPTRDukFT/mNWbojkQmS29spNlzB2q4QIQIAIGcJIPUDllFIUhR0OdqQo4OVwgMEgReY1VjMZTFQWx47EFeY18V1kP1GwMA==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776018\", \"Content-Digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"13d76c59-fcba-4de6-9d72-784d85903a22\\\", x5u=\\\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\\\"\", \"Host\": \"host.docker.internal:8074\", \"Connection\": \"Keep-Alive\", \"Accept-Encoding\": \"gzip\", \"User-Agent\": \"okhttp/4.10.0\"}",
+                        "body": ""
+                    },
+                    "response": {
+                        "code": 200,
+                        "json": {
+                            "operational_intent": {
+                                "reference": {
+                                    "id": "917d849c-7977-4057-bd92-fc90a4f9e2d8",
+                                    "manager": "mock-uss.interuss.com",
+                                    "ovn": "GF8n.EbuQ-mFzkQXVDcC4LHbKmwKh2wS27R5gjcU.d4_",
+                                    "state": "Accepted",
+                                    "subscription_id": "3be0d3d2-38ca-416c-8ad1-cd04cdabd21e",
+                                    "time_end": {
+                                        "format": "RFC3339",
+                                        "value": "2023-01-03T20:13:10.600000Z"
+                                    },
+                                    "time_start": {
+                                        "format": "RFC3339",
+                                        "value": "2023-01-03T20:08:10.600000Z"
+                                    },
+                                    "uss_availability": "Unknown",
+                                    "uss_base_url": "http://host.docker.internal:8074/mock/scd",
+                                    "version": 1
+                                },
+                                "details": {
+                                    "volumes": [
+                                        {
+                                            "volume": {
+                                                "outline_polygon": {
+                                                    "vertices": [
+                                                        {
+                                                            "lat": 7.477423822749622,
+                                                            "lng": 46.97491999984008
+                                                        },
+                                                        {
+                                                            "lat": 7.477423821039847,
+                                                            "lng": 46.97538499982026
+                                                        },
+                                                        {
+                                                            "lat": 7.477424770457274,
+                                                            "lng": 46.97539822817162
+                                                        },
+                                                        {
+                                                            "lat": 7.477427609667229,
+                                                            "lng": 46.975411329130466
+                                                        },
+                                                        {
+                                                            "lat": 7.477432311328011,
+                                                            "lng": 46.975424176527724
+                                                        },
+                                                        {
+                                                            "lat": 7.477438830161459,
+                                                            "lng": 46.97543664663613
+                                                        },
+                                                        {
+                                                            "lat": 7.477447103388957,
+                                                            "lng": 46.975448619361856
+                                                        },
+                                                        {
+                                                            "lat": 7.477457051335981,
+                                                            "lng": 46.975459979401066
+                                                        },
+                                                        {
+                                                            "lat": 7.477468578199379,
+                                                            "lng": 46.97547061735031
+                                                        },
+                                                        {
+                                                            "lat": 7.477481572969964,
+                                                            "lng": 46.97548043076024
+                                                        },
+                                                        {
+                                                            "lat": 7.4774959105015855,
+                                                            "lng": 46.97548932512221
+                                                        },
+                                                        {
+                                                            "lat": 7.477511452716338,
+                                                            "lng": 46.97549721477847
+                                                        },
+                                                        {
+                                                            "lat": 7.47752804993433,
+                                                            "lng": 46.97550402374711
+                                                        },
+                                                        {
+                                                            "lat": 7.477545542315188,
+                                                            "lng": 46.975509686453854
+                                                        },
+                                                        {
+                                                            "lat": 7.477563761397435,
+                                                            "lng": 46.97551414836356
+                                                        },
+                                                        {
+                                                            "lat": 7.477582531720886,
+                                                            "lng": 46.9755173665054
+                                                        },
+                                                        {
+                                                            "lat": 7.477601672516463,
+                                                            "lng": 46.975519309886806
+                                                        },
+                                                        {
+                                                            "lat": 7.477620999447144,
+                                                            "lng": 46.97551995979184
+                                                        },
+                                                        {
+                                                            "lat": 7.478057000544437,
+                                                            "lng": 46.97551995980457
+                                                        },
+                                                        {
+                                                            "lat": 7.478076327475301,
+                                                            "lng": 46.975519309900726
+                                                        },
+                                                        {
+                                                            "lat": 7.478095468271412,
+                                                            "lng": 46.97551736652059
+                                                        },
+                                                        {
+                                                            "lat": 7.478114238595763,
+                                                            "lng": 46.97551414838003
+                                                        },
+                                                        {
+                                                            "lat": 7.478132457679282,
+                                                            "lng": 46.97550968647161
+                                                        },
+                                                        {
+                                                            "lat": 7.478149950061773,
+                                                            "lng": 46.97550402376608
+                                                        },
+                                                        {
+                                                            "lat": 7.478166547281737,
+                                                            "lng": 46.97549721479852
+                                                        },
+                                                        {
+                                                            "lat": 7.4781820894987705,
+                                                            "lng": 46.97548932514323
+                                                        },
+                                                        {
+                                                            "lat": 7.478196427032943,
+                                                            "lng": 46.97548043078203
+                                                        },
+                                                        {
+                                                            "lat": 7.478209421806301,
+                                                            "lng": 46.97547061737267
+                                                        },
+                                                        {
+                                                            "lat": 7.478220948672645,
+                                                            "lng": 46.975459979423775
+                                                        },
+                                                        {
+                                                            "lat": 7.478230896622737,
+                                                            "lng": 46.97544861938469
+                                                        },
+                                                        {
+                                                            "lat": 7.4782391698533655,
+                                                            "lng": 46.97543664665883
+                                                        },
+                                                        {
+                                                            "lat": 7.4782456886899595,
+                                                            "lng": 46.975424176550064
+                                                        },
+                                                        {
+                                                            "lat": 7.4782503903538515,
+                                                            "lng": 46.97541132915219
+                                                        },
+                                                        {
+                                                            "lat": 7.478253229566841,
+                                                            "lng": 46.97539822819251
+                                                        },
+                                                        {
+                                                            "lat": 7.478254178987183,
+                                                            "lng": 46.975384999840095
+                                                        },
+                                                        {
+                                                            "lat": 7.478254177277408,
+                                                            "lng": 46.974919999820244
+                                                        },
+                                                        {
+                                                            "lat": 7.478253227761765,
+                                                            "lng": 46.97490677142331
+                                                        },
+                                                        {
+                                                            "lat": 7.4782503884602685,
+                                                            "lng": 46.97489367042681
+                                                        },
+                                                        {
+                                                            "lat": 7.4782456867183855,
+                                                            "lng": 46.97488082300081
+                                                        },
+                                                        {
+                                                            "lat": 7.478239167817867,
+                                                            "lng": 46.974868352873266
+                                                        },
+                                                        {
+                                                            "lat": 7.478230894540598,
+                                                            "lng": 46.974856380138455
+                                                        },
+                                                        {
+                                                            "lat": 7.478220946563947,
+                                                            "lng": 46.974845020100375
+                                                        },
+                                                        {
+                                                            "lat": 7.478209419693374,
+                                                            "lng": 46.974834382162385
+                                                        },
+                                                        {
+                                                            "lat": 7.47819642493976,
+                                                            "lng": 46.974824568773556
+                                                        },
+                                                        {
+                                                            "lat": 7.4781820874502785,
+                                                            "lng": 46.97481567444202
+                                                        },
+                                                        {
+                                                            "lat": 7.478166545303149,
+                                                            "lng": 46.97480778482489
+                                                        },
+                                                        {
+                                                            "lat": 7.478149948177879,
+                                                            "lng": 46.9748009759033
+                                                        },
+                                                        {
+                                                            "lat": 7.4781324559137685,
+                                                            "lng": 46.97479531325065
+                                                        },
+                                                        {
+                                                            "lat": 7.478114236970597,
+                                                            "lng": 46.97479085140123
+                                                        },
+                                                        {
+                                                            "lat": 7.478095466806278,
+                                                            "lng": 46.9747876333249
+                                                        },
+                                                        {
+                                                            "lat": 7.478076326187155,
+                                                            "lng": 46.97478569001336
+                                                        },
+                                                        {
+                                                            "lat": 7.478056999447158,
+                                                            "lng": 46.974785040181715
+                                                        },
+                                                        {
+                                                            "lat": 7.477621000544429,
+                                                            "lng": 46.97478504019445
+                                                        },
+                                                        {
+                                                            "lat": 7.477601673804613,
+                                                            "lng": 46.974785690027296
+                                                        }
+                                                    ]
+                                                },
+                                                "altitude_lower": {
+                                                    "value": 605.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                },
+                                                "altitude_upper": {
+                                                    "value": 635.0,
+                                                    "reference": "W84",
+                                                    "units": "M"
+                                                }
+                                            },
+                                            "time_start": {
+                                                "value": "2023-01-03T20:08:10.600000Z",
+                                                "format": "RFC3339"
+                                            },
+                                            "time_end": {
+                                                "value": "2023-01-03T20:13:10.600000Z",
+                                                "format": "RFC3339"
+                                            }
+                                        }
+                                    ],
+                                    "off_nominal_volumes": [],
+                                    "priority": 0
+                                }
+                            }
+                        },
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3586\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776018\", \"x-utm-message-signature\": \"utm-message-signature=:xuiQJfKa0E9t57LaK+jGor1c6U76fr8Xb9b2E1raetxiRzwHcJWB3eQMfuhUtxQahEtKKGpxHeWefNyugboFkOo/vUSJJORVMnOPtZSugm1Tz74CsSVtutFA2kyc+5yWjpsxcZew9I6waUbiWJyFNgJI9Su/AF7tbXOkW2aXYaPhRM0HjhAPx0Xmi3bXy2JX7pInxBhGBOpR2snr1a+zKTRVON78CGcbMneaMjU+jqT6V/TqWAKnUiNeRMsFRvNOZ7xPXZstazlHzhXYxRuV1MARarTcZHngoBDiGdsd+jDGF/OpYXXrUTNNOrVV9SBj0gnx+1z6DHIlTpR4bjGfCw==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:q97nQ4LKzrec70jT06xTOUOJJKWoRHcU01M9dipNN0LitcXPqBMEZPdmrNgv1fg579jFPDcAF9qscL6ttoVn7A==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming GET request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents/917d849c-7977-4057-bd92-fc90a4f9e2d8 should be valid."
+                }
+            },
+            {
+                "interaction_id": "d3713c58-7fd0-4ebc-9a70-6b2b96f864e4",
+                "purpose": "Checking that the message signing headers in the incoming POST request to the mock uss endpoint /mock/scd/uss/v1/operational_intents are valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents",
+                        "initiated_at": "2023-01-03T20:00:19.771631",
+                        "headers": "{\"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiaHR0cDovL29hdXRoLmRzcy5kZXZjbHVzdGVyLmxvY2FsIiwic2NvcGUiOiJ1dG0uc3RyYXRlZ2ljX2Nvb3JkaW5hdGlvbiIsInN1YiI6InVzcy51ZnQuYXhlbnRlcnByaXplLmNvbSJ9.PzDqsNwyOIxGQH1LvxpCOCrZ4GvvWdxiNv2TDkV3gSHCUgnOrezqQJ5LwGp5sVfSiONqzWI767anGCsW85ORsAJ_PC3s9y0fxN2qSsK182RX2eFqChPF7PC9dTwwhhzobsNjcSWp5D94Fjcc_YGtyT1MVnXPaXZqtZcv2x53Wj8\", \"Content-Type\": \"application/json\", \"X-Utm-Message-Signature\": \"utm-message-signature=:SboQBlGebaIA0nnWIcuvZgzGNdksYSNW8YuL1ylP7Z1u8+JhEBNKqnHHmSVF3EuceSmTzsX5U3VRlOH36wV6stPnYIvUeXXX+8HkO17XYQLkvnR4UxF+QETbUHKC8wo4Gq1lW4GkiZMoTmPTWuBD7AJ9cjBTCvQy18cRQJzM79/6mVkbKm+V31Lr1HnnOFoBhO1JA/TzoK8q+L7owJrzcz+E7X95IVLO8YLKnaT2HfVNT/FvRetaICGUErGiIs1cYfupd8v6e8soqwGAxgbrSDVixtCSdp0Qh2gE2DPC3DaRwaPkK986yFBUv5A8M6iPgZChjSvpVaiE0MPNaprxkw==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776019\", \"Content-Digest\": \"sha-512=:AvPK9sz0YfuQxxJgCLiaprXNyxRd0mcdyyaqzwE0eWJc5SZf2qWLtbR9o03n1RMq2rQHMdTV20c62cXZ6U2bNw==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"13d76c59-fcba-4de6-9d72-784d85903a22\\\", x5u=\\\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\\\"\", \"Content-Length\": \"4649\", \"Host\": \"host.docker.internal:8074\", \"Connection\": \"Keep-Alive\", \"Accept-Encoding\": \"gzip\", \"User-Agent\": \"okhttp/4.10.0\"}",
+                        "body": "{\"operational_intent_id\":\"a6487d64-d1ca-4742-8284-11901db5fb9b\",\"operational_intent\":{\"reference\":{\"id\":\"a6487d64-d1ca-4742-8284-11901db5fb9b\",\"manager\":\"uss.uft.axenterprize.com\",\"uss_availability\":\"Unknown\",\"version\":1,\"state\":\"Accepted\",\"ovn\":\"ivBZQBUuI.QDwUK9G.KocMLl4G9Zl35rU.QK82FzWww_\",\"time_start\":{\"value\":\"2023-01-03T20:08:10.600Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-01-03T20:13:10.600Z\",\"format\":\"RFC3339\"},\"uss_base_url\":\"http://host.docker.internal:8090\",\"subscription_id\":\"ed6925cb-f255-4fe4-9455-2e1df2fe3e58\"},\"details\":{\"volumes\":[{\"volume\":{\"outline_polygon\":{\"vertices\":[{\"lng\":46.97716400145211,\"lat\":7.474315728091042},{\"lng\":46.97717412304557,\"lat\":7.474303247689658},{\"lng\":46.9771850331586,\"lat\":7.474292276891787},{\"lng\":46.97719662672131,\"lat\":7.474282921352688},{\"lng\":46.97720879208173,\"lat\":7.474275271172041},{\"lng\":46.97722141208117,\"lat\":7.474269400026217},{\"lng\":46.977234365182404,\"lat\":7.4742653644586845},{\"lng\":46.97724752664021,\"lat\":7.474263203335437},{\"lng\":46.97726076970267,\"lat\":7.474262937470636},{\"lng\":46.97727396683188,\"lat\":7.474264569426098},{\"lng\":46.97728699093222,\"lat\":7.47426808348659},{\"lng\":46.97729971657432,\"lat\":7.474273445811106},{\"lng\":46.97731202120303,\"lat\":7.474280604758724},{\"lng\":46.97732378631779,\"lat\":7.4742894913859015},{\"lng\":46.977334898613684,\"lat\":7.47430002011039},{\"lng\":46.97734525107282,\"lat\":7.474312089535409},{\"lng\":46.97735474399491,\"lat\":7.4743255834261335},{\"lng\":46.977363285957416,\"lat\":7.47434037182908},{\"lng\":46.97737079469613,\"lat\":7.474356312323634},{\"lng\":46.977377197897326,\"lat\":7.47437325139364},{\"lng\":46.97738243389426,\"lat\":7.474391025905868},{\"lng\":46.977386452261086,\"lat\":7.474409464681103},{\"lng\":46.97738921429845,\"lat\":7.474428390142731},{\"lng\":46.97739069340619,\"lat\":7.4744476200269405},{\"lng\":46.97739087533958,\"lat\":7.474466969138073},{\"lng\":46.97738975834647,\"lat\":7.474486251132214},{\"lng\":46.97738735318418,\"lat\":7.474505280311834},{\"lng\":46.97738368301589,\"lat\":7.47452387341421},{\"lng\":46.97737878318756,\"lat\":7.474541851376407},{\"lng\":46.97737270088755,\"lat\":7.474559041059788},{\"lng\":46.9773654946921,\"lat\":7.474575276917473},{\"lng\":46.977357234001225,\"lat\":7.474590402588685},{\"lng\":46.97734799837037,\"lat\":7.474604272404609},{\"lng\":46.97480899404357,\"lat\":7.4780602717187445},{\"lng\":46.97479887202181,\"lat\":7.478072750859629},{\"lng\":46.97478796152745,\"lat\":7.47808372039712},{\"lng\":46.97477636763495,\"lat\":7.478093074689058},{\"lng\":46.97476420200029,\"lat\":7.478100723649223},{\"lng\":46.974751581785505,\"lat\":7.478106593614889},{\"lng\":46.97473862853046,\"lat\":7.478110628056212},{\"lng\":46.9747254669823,\"lat\":7.4781127881205816},{\"lng\":46.97471222389403,\"lat\":7.478113053006759},{\"lng\":46.974699026803876,\"lat\":7.478111420165148},{\"lng\":46.97468600280696,\"lat\":7.478107905322289},{\"lng\":46.974673277331334,\"lat\":7.478102542329355},{\"lng\":46.97466097293006,\"lat\":7.478095382836098},{\"lng\":46.9746492081009,\"lat\":7.478086495793389},{\"lng\":46.97463809614524,\"lat\":7.478075966789133},{\"lng\":46.97462774407688,\"lat\":7.47806389722399},{\"lng\":46.97461825159139,\"lat\":7.478050403334804},{\"lng\":46.97460971010614,\"lat\":7.4780356150751714},{\"lng\":46.97460220187985,\"lat\":7.478019674863899},{\"lng\":46.97459579922035,\"lat\":7.478002736213457},{\"lng\":46.97459056378839,\"lat\":7.477984962251586},{\"lng\":46.974586546003664,\"lat\":7.477966524150307},{\"lng\":46.974583784559336,\"lat\":7.477947599477487},{\"lng\":46.97458230604945,\"lat\":7.477928370486799},{\"lng\":46.974582124712704,\"lat\":7.477909022362576},{\"lng\":46.97458324229544,\"lat\":7.4778897414364325},{\"lng\":46.974585648034825,\"lat\":7.47787071339284},{\"lng\":46.974589318762405,\"lat\":7.477852121480946},{\"lng\":46.974594219127326,\"lat\":7.477834144749823},{\"lng\":46.97460030193667,\"lat\":7.47781695632419},{\"lng\":46.97460750861006,\"lat\":7.477800721737151},{\"lng\":46.974615769743735,\"lat\":7.47778559733606},{\"lng\":46.97462500577891,\"lat\":7.477771728776835}]},\"altitude_lower\":{\"value\":605.0,\"reference\":\"W84\",\"units\":\"M\"},\"altitude_upper\":{\"value\":635.0,\"reference\":\"W84\",\"units\":\"M\"}},\"time_start\":{\"value\":\"2023-01-03T20:08:10.600Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-01-03T20:13:10.600Z\",\"format\":\"RFC3339\"}}],\"off_nominal_volumes\":[],\"priority\":100}},\"subscriptions\":[{\"subscription_id\":\"2690503a-060a-43ee-bbf1-0a3c56d780a5\",\"notification_index\":8},{\"subscription_id\":\"29f9e771-77b8-46b0-9a8d-37f83f50667d\",\"notification_index\":2},{\"subscription_id\":\"3be0d3d2-38ca-416c-8ad1-cd04cdabd21e\",\"notification_index\":2},{\"subscription_id\":\"5048a07e-b5f4-4006-b1c9-7f362523e167\",\"notification_index\":6},{\"subscription_id\":\"d07a16ae-708a-484b-84d4-d2cd45e360fe\",\"notification_index\":10}]}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "json": null,
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776020\", \"x-utm-message-signature\": \"utm-message-signature=:2DJ525D0wtyfgNAAtXIzqrfRZUgaIipI8UF1BrhG2EzZ2TQ+0iNTDQN/eNml8xvRvgB5e3UhDnJgLwe407vjOAiXwX30inhqksRTbvEiqpyWOyRxl9ZZDvnn8WdkjN1TSXAbxPO6XzWxJS7rmxLHN6ndNY0BRQfau9+rNZtwkE68WhHNBL6qgmzJOh0x8AEW4aLE+RAhAQJ2R9VZC5MKkqBo9W2v2WtxzIGWZ3rOkv1xVib2JqquP4M7hVyPOLSyJjCGh3fhysbJeWxPB3bwKrxw5zal7EOHmIzp83wWDFCNjlIZEehA2AXR7N/j8XWldH21OgWo37omgF7MWOi4ZQ==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming POST request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents should be valid."
+                }
+            },
+            {
+                "interaction_id": "3a6a71c6-43fe-4a94-aff6-2433f459db46",
+                "purpose": "Checking that the message signing headers in the incoming POST request to the mock uss endpoint /mock/scd/uss/v1/operational_intents are valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents",
+                        "initiated_at": "2023-01-03T20:00:20.340952",
+                        "headers": "{\"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImV4cCI6MTY3Mjc3OTYxMiwiaXNzIjoiaHR0cDovL29hdXRoLmRzcy5kZXZjbHVzdGVyLmxvY2FsIiwic2NvcGUiOiJ1dG0uc3RyYXRlZ2ljX2Nvb3JkaW5hdGlvbiIsInN1YiI6InVzcy51ZnQuYXhlbnRlcnByaXplLmNvbSJ9.PzDqsNwyOIxGQH1LvxpCOCrZ4GvvWdxiNv2TDkV3gSHCUgnOrezqQJ5LwGp5sVfSiONqzWI767anGCsW85ORsAJ_PC3s9y0fxN2qSsK182RX2eFqChPF7PC9dTwwhhzobsNjcSWp5D94Fjcc_YGtyT1MVnXPaXZqtZcv2x53Wj8\", \"Content-Type\": \"application/json\", \"X-Utm-Message-Signature\": \"utm-message-signature=:WBGNA6uUwck30GoT5mYgeEGVSRdYxq/5vz/KF+OACRVgwKPosBoInpsc+Qk4gB+6SFixQOeLmqfLXX0j308/PWRW8q58mMhLq1roWP2MJe8CTun06toBK9dppI3q7BMsBSc8L+2Il6unNE/3gXumoSjnomva4kKdaqhpZjPoesIadsnqbhHGFvaY/yBEkRukspg0KHqCBqpmUya5mgwr0qe9jBGtaf22/+AWuikTy+18hh3Vc7C0EVY50XHyJWMNO/HT6401N0K7gPMR45PGOV/D+vv2p9i4YTTmg7+uJFDoMLQxYDdc9PtY+TtPA3nVA245VNZzQCkJpfi5A+qx9w==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776020\", \"Content-Digest\": \"sha-512=:dT2jZAKekex2/t5OGe8d8d1boBOR9MMevrpCmhjfehR1j9utKN1XUYWtI7KFi+OkMUhSbcHaJ6XYx12rq2qSSw==:\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"13d76c59-fcba-4de6-9d72-784d85903a22\\\", x5u=\\\"https://uss.uft.axenterprize.com/.well-known/uas-traffic-management/cert.der\\\"\", \"Content-Length\": \"493\", \"Host\": \"host.docker.internal:8074\", \"Connection\": \"Keep-Alive\", \"Accept-Encoding\": \"gzip\", \"User-Agent\": \"okhttp/4.10.0\"}",
+                        "body": "{\"operational_intent_id\":\"a6487d64-d1ca-4742-8284-11901db5fb9b\",\"subscriptions\":[{\"subscription_id\":\"2690503a-060a-43ee-bbf1-0a3c56d780a5\",\"notification_index\":9},{\"subscription_id\":\"29f9e771-77b8-46b0-9a8d-37f83f50667d\",\"notification_index\":3},{\"subscription_id\":\"3be0d3d2-38ca-416c-8ad1-cd04cdabd21e\",\"notification_index\":3},{\"subscription_id\":\"5048a07e-b5f4-4006-b1c9-7f362523e167\",\"notification_index\":7},{\"subscription_id\":\"d07a16ae-708a-484b-84d4-d2cd45e360fe\",\"notification_index\":11}]}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "json": null,
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1672776020\", \"x-utm-message-signature\": \"utm-message-signature=:2DJ525D0wtyfgNAAtXIzqrfRZUgaIipI8UF1BrhG2EzZ2TQ+0iNTDQN/eNml8xvRvgB5e3UhDnJgLwe407vjOAiXwX30inhqksRTbvEiqpyWOyRxl9ZZDvnn8WdkjN1TSXAbxPO6XzWxJS7rmxLHN6ndNY0BRQfau9+rNZtwkE68WhHNBL6qgmzJOh0x8AEW4aLE+RAhAQJ2R9VZC5MKkqBo9W2v2WtxzIGWZ3rOkv1xVib2JqquP4M7hVyPOLSyJjCGh3fhysbJeWxPB3bwKrxw5zal7EOHmIzp83wWDFCNjlIZEehA2AXR7N/j8XWldH21OgWo37omgF7MWOi4ZQ==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming POST request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents should be valid."
+                }
+            }
+        ]
+    }
+}
