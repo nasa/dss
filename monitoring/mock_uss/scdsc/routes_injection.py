@@ -100,9 +100,8 @@ def scdsc_injection_start_reporter() -> Tuple[str, int]:
 @webapp.route("/scdsc/v1/endreport", methods=["POST"])
 def scdsc_injection_end_reporter() -> Tuple[str, int]:
     """Implements USS status in SCD automated testing injection API."""
-    logger.info("Ending the report")
     report_settings.reprt.save()
-    logger.info("Report saved")
+    logger.info("Report saved.")
     report_settings.reset()
     return flask.jsonify({"report": "ended"})
 

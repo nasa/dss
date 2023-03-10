@@ -3,7 +3,6 @@ from typing import Dict, List, Optional
 from implicitdict import ImplicitDict
 from monitoring.monitorlib import fetch
 from pathlib import Path
-from loguru import logger
 
 InteractionID = str
 
@@ -84,7 +83,7 @@ class MussReport(ImplicitDict):
         filepath = "./report/report_mock_uss_scdsc_messagesigning.json"
         with open(filepath, "w") as f:
             f.write(json.dumps(self, indent=4, default=str))
-        logger.info("[Mock USS] Report saved to {}".format(filepath))
+        print("[Mock USS] Report saved to {}".format(filepath))
 
     def reset(self):
         self.findings.issues = []
