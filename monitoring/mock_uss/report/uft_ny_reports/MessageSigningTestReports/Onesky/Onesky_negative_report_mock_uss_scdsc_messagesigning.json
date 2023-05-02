@@ -1,0 +1,148 @@
+{
+    "findings": {
+        "interactions": [
+            {
+                "interaction_id": "b5b9f477-f204-4bb0-a013-41d88cb02cfa",
+                "purpose": "Checking that the message signing headers in the incoming POST request to the mock uss endpoint /mock/scd/uss/v1/operational_intents are valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents",
+                        "initiated_at": "2023-03-14T13:37:58.788610",
+                        "headers": "{\"User-Agent\": \"ReactorNetty/1.0.18\", \"Host\": \"host.docker.internal:8074\", \"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImNsaWVudF9pZCI6Im9uZXNreSIsImV4cGlyZXNfaW4iOjE2Nzg4MDQ2NzgsImlzcyI6ImR1bW15IiwianRpIjoiNGE2OWM1NjgtYTg3NC00NzJmLWI2OGQtMDljODRmYTE4NjY3IiwibmJmIjoxNjc4ODAxMDc4LCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoib25lc2t5IiwidG9rZW5fdHlwZSI6ImJlYXJlciJ9.KeepwODjO2iX0bJ1REOgaJCJRGMk9lz1El-7qZTjvGkCjGspxhpHJOY9D8WonXNl_f3dE_rkuUzX_anIpytK0l-Ptusm3mcza3Kr_coAmZoGXJkjmNsQUyP6YR042cL-VTWHDNNSRRrxLHuNiOQvYTT4Z_MEO3j7TiESR8ddyv8\", \"X-B3-Traceid\": \"c3b35d3c5f016ea8\", \"X-B3-Spanid\": \"c3b35d3c5f016ea8\", \"X-B3-Sampled\": \"0\", \"Content-Type\": \"application/json\", \"Content-Digest\": \"sha-512=:89FZFSAfbD+D4QGTZYNE3RXytMrUcnit2z9CPx+3wG+lTdMpT0Nsa5tH55C024faotvbx/vIksl96xiWBTwD/A==:\", \"X-Utm-Message-Signature\": \"utm-message-signature=:XRxHM2CAaVs70GN3tPvmnp+qO3RPfqM5HR6ncIaF15Q+gx25nNq/Sg6dafrgC04K7m8wILZM+VhH2UpSNVJyHS52RGcsFY+IDGed+qOdnzxK8BcdGJxPBcC7BH0a9Nf/1aEWTuxyrOwVzALACuGHuzUJz4JsooQRgzqW9CFzSwxMXZgGfaaZoo+PmTDpC+yj+JBR3Hqa+RleattVa+I32GpiCATrmBZ41noGJQCLa8sXMZzXOGHW349MijCONEzNQR0pjRiOQlSdMKdWd8cC0U2ZR92LTMtF6RMfb6k81t0rgYBxeFqIAa+2/Ea9CYU5+rG/8kYgXFjUr5GSldABcw==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1678801078\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"a64648b5-f54c-509b-aa8a-3ee0526e846c\\\", x5u=\\\"https://fims.onesky.xyz/uft-onesky.der\\\"\", \"Date\": \"Tue, 14 Mar 2023 13:37:58 GMT\", \"Content-Length\": \"3296\"}",
+                        "body": "{\"operational_intent_id\":\"656a4b29-b902-4ef5-8c10-8d83325cf54a\",\"subscriptions\":[{\"subscription_id\":\"9bb665be-6054-4079-a2ee-d0307b726241\",\"notification_index\":1}],\"operational_intent\":{\"reference\":{\"id\":\"656a4b29-b902-4ef5-8c10-8d83325cf54a\",\"manager\":\"onesky\",\"version\":1,\"ovn\":\"yqfo31ItAflRoU6avbqJuqaqDqIks1ZyyWnfEUlACSA_\",\"time_start\":{\"value\":\"2023-03-14T13:45:25.903Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-03-14T13:50:25.903Z\",\"format\":\"RFC3339\"},\"uss_base_url\":\"http://host.docker.internal:8067\",\"uss_availability\":\"Normal\",\"subscription_id\":\"bfbc994c-a791-4db1-856d-1333622ced3f\",\"state\":\"Accepted\"},\"details\":{\"volumes\":[{\"volume\":{\"outline_circle\":null,\"outline_polygon\":{\"vertices\":[{\"lng\":46.9749199998,\"lat\":7.4774238227},{\"lng\":46.9753849998,\"lat\":7.477423821},{\"lng\":46.9753982282,\"lat\":7.4774247705},{\"lng\":46.9754113291,\"lat\":7.4774276097},{\"lng\":46.9754241765,\"lat\":7.4774323113},{\"lng\":46.9754366466,\"lat\":7.4774388302},{\"lng\":46.9754486194,\"lat\":7.4774471034},{\"lng\":46.9754599794,\"lat\":7.4774570513},{\"lng\":46.9754706174,\"lat\":7.4774685782},{\"lng\":46.9754804308,\"lat\":7.477481573},{\"lng\":46.9754893251,\"lat\":7.4774959105},{\"lng\":46.9754972148,\"lat\":7.4775114527},{\"lng\":46.9755040237,\"lat\":7.4775280499},{\"lng\":46.9755096865,\"lat\":7.4775455423},{\"lng\":46.9755141484,\"lat\":7.4775637614},{\"lng\":46.9755173665,\"lat\":7.4775825317},{\"lng\":46.9755193099,\"lat\":7.4776016725},{\"lng\":46.9755199598,\"lat\":7.4776209994},{\"lng\":46.9755199598,\"lat\":7.4780570005},{\"lng\":46.9755193099,\"lat\":7.4780763275},{\"lng\":46.9755173665,\"lat\":7.4780954683},{\"lng\":46.9755141484,\"lat\":7.4781142386},{\"lng\":46.9755096865,\"lat\":7.4781324577},{\"lng\":46.9755040238,\"lat\":7.4781499501},{\"lng\":46.9754972148,\"lat\":7.4781665473},{\"lng\":46.9754893251,\"lat\":7.4781820895},{\"lng\":46.9754804308,\"lat\":7.478196427},{\"lng\":46.9754706174,\"lat\":7.4782094218},{\"lng\":46.9754599794,\"lat\":7.4782209487},{\"lng\":46.9754486194,\"lat\":7.4782308966},{\"lng\":46.9754366467,\"lat\":7.4782391699},{\"lng\":46.9754241766,\"lat\":7.4782456887},{\"lng\":46.9754113292,\"lat\":7.4782503904},{\"lng\":46.9753982282,\"lat\":7.4782532296},{\"lng\":46.9753849998,\"lat\":7.478254179},{\"lng\":46.9749199998,\"lat\":7.4782541773},{\"lng\":46.9749067714,\"lat\":7.4782532278},{\"lng\":46.9748936704,\"lat\":7.4782503885},{\"lng\":46.974880823,\"lat\":7.4782456867},{\"lng\":46.9748683529,\"lat\":7.4782391678},{\"lng\":46.9748563801,\"lat\":7.4782308945},{\"lng\":46.9748450201,\"lat\":7.4782209466},{\"lng\":46.9748343822,\"lat\":7.4782094197},{\"lng\":46.9748245688,\"lat\":7.4781964249},{\"lng\":46.9748156744,\"lat\":7.4781820875},{\"lng\":46.9748077848,\"lat\":7.4781665453},{\"lng\":46.9748009759,\"lat\":7.4781499482},{\"lng\":46.9747953133,\"lat\":7.4781324559},{\"lng\":46.9747908514,\"lat\":7.478114237},{\"lng\":46.9747876333,\"lat\":7.4780954668},{\"lng\":46.97478569,\"lat\":7.4780763262},{\"lng\":46.9747850402,\"lat\":7.4780569994},{\"lng\":46.9747850402,\"lat\":7.4776210005},{\"lng\":46.97478569,\"lat\":7.4776016738},{\"lng\":46.9747876333,\"lat\":7.4775825332},{\"lng\":46.9747908514,\"lat\":7.477563763}]},\"altitude_lower\":{\"value\":605.0,\"reference\":\"W84\",\"units\":\"M\"},\"altitude_upper\":{\"value\":635.0,\"reference\":\"W84\",\"units\":\"M\"}},\"time_start\":{\"value\":\"2023-03-14T13:45:25.903Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-03-14T13:50:25.903Z\",\"format\":\"RFC3339\"}}],\"off_nominal_volumes\":[],\"priority\":0}}}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "json": null,
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1678801079\", \"x-utm-message-signature\": \"utm-message-signature=:byu7vxvALyY5zNWQVzRVUB5nEfl8r/+MyEexZ46lbEhQ1dz0D4SIiOOlvDvxZS2AnWk6UqkQ095mznz5G21sGzxzA1oNlwbCHTwX8J9j3n21vI6RavCQhZJMgwmTmF/njvh8bMSbp7pBBJm0OQIfdyhxSvucHVd+j4W4Z64zwm82gX8GQZ+jA8avbu0DCIzHAk7lkV3GoM1ipIFdZp+VoQ87Yo6LiX4j88tGsnap4eIcYDg9Y6flTC9AMA5c8qB28iAIKCollJHxjDfDaOdbw1VEskGf/W8O5JX/a+1uD9upu2p8Ea6xu02jNDjLlzZKdMWMc88SBK8AnxmN6mxDxw==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming POST request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents should be valid."
+                }
+            },
+            {
+                "interaction_id": "5a9dedad-f89e-4360-ae0d-88a2def97fc9",
+                "purpose": "Message signing headers in the response from the outgoing GET request to http://host.docker.internal:8067/uss/v1/operational_intents/656a4b29-b902-4ef5-8c10-8d83325cf54a should be valid.",
+                "query": {
+                    "request": {
+                        "method": "GET",
+                        "url": "http://host.docker.internal:8067/uss/v1/operational_intents/656a4b29-b902-4ef5-8c10-8d83325cf54a",
+                        "headers": "{\"User-Agent\": \"python-requests/2.25.1\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept\": \"*/*\", \"Connection\": \"keep-alive\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImNsaWVudF9pZCI6Im1vY2stdXNzLmludGVydXNzLmNvbSIsImV4cCI6MTY3ODgwNDY0NywiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.HDGBPqffffudOgVd_QuI0PpFAxM3WO83L2TV5jo0DP5EfceK47Vinx39I3pT0kEtjOcP3UJLLbo0Vqzu7-w5dvI9QtI-X4Kf5FTx_aOdX7iLZXAJTgRkDph408nfGKOojd-wodGXU2KopBLAVxAcbsL2-P97kurQLHSN1KvKCSA\", \"content-type\": \"\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1678801120\", \"x-utm-message-signature\": \"utm-message-signature=:FYd5YZCYaRJ78PlnEGurPkUvFVc7RefWZI7P8HmUPPMuLiLfedg0LNe+2SEXv7kC6pcfCLBKqGL3X2lrDZJCLgVCs9LtT3Cd2QvBvh1oTUoVCeqtMIMe8mT9Dsp/PXBK+AieOjAvdCjRzJK6YoklU/JW4YZ2okHhR/LhhbhA5IOpMxbWpET8PP9teiTMZbCtSFdK76wzDJtjqCB3KkcVOTWjPtCTUW7Q/d4Prl7EwWxgE1YawO5FDVk3DTBSFpfXhPwLQ50hJ7zcqV6pG1mqJ+1nCnuSTIYUlOt7+lqIgXMxE1fQdRR+IHkWXSco3yx7IKtXyOi9SgR2/AvDl9qzyw==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}",
+                        "body": null
+                    },
+                    "response": {
+                        "code": 403,
+                        "headers": "{'WWW-Authenticate': 'Signature verification failed for CN=mock-uss.interuss.com,OU=Freddie-UFT,O=NASA,C=US', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'content-digest': 'sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:', 'x-utm-message-signature': 'utm-message-signature=:mqk0BlWBhgoN2rsMA9OLq9GNCwz0Q/2bmeyHH3IpHuTDREAaHtn3xP4gUSXsR9TLFfiseueR27sPi3dBjkGUE+mkHPd6/ctvXCj7l3KFtgjUt9GizaxcWaOm+0yVLRrmFECim69YEa7KsVjkk8fuoeVTuhX6gkXcGEOSJWxmY0zkdTu1GbR3/GfvQ8wsWLlCIxdp/XEaNsnb76YX2/MHnnJj8kWHXRhPh72Z73ZaT37+KZ6P3Lv9nFr2RplUcfEsgtlcluFDo0oX44C1tzXgQBTYj9NMyKWCQMEQqtbwPsltJ7ZKNbHcjvM8h40YPogCiOEhERG7RSFZW3gExPOHCQ==:', 'x-utm-message-signature-input': 'utm-message-signature=(\"@status\" \"content-type\" \"content-digest\" \"x-utm-jws-header\");created=1678801121', 'x-utm-jws-header': 'alg=\"RS256\", typ=\"JOSE\", kid=\"a64648b5-f54c-509b-aa8a-3ee0526e846c\", x5u=\"https://fims.onesky.xyz/uft-onesky.der\"', 'Date': 'Tue, 14 Mar 2023 13:38:41 GMT', 'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImNsaWVudF9pZCI6Im1vY2stdXNzLmludGVydXNzLmNvbSIsImV4cCI6MTY3ODgwNDY0NywiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.HDGBPqffffudOgVd_QuI0PpFAxM3WO83L2TV5jo0DP5EfceK47Vinx39I3pT0kEtjOcP3UJLLbo0Vqzu7-w5dvI9QtI-X4Kf5FTx_aOdX7iLZXAJTgRkDph408nfGKOojd-wodGXU2KopBLAVxAcbsL2-P97kurQLHSN1KvKCSA', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'}",
+                        "json": {
+                            "timestamp": "2023-03-14T13:38:41.135+00:00",
+                            "status": 403,
+                            "error": "Forbidden",
+                            "path": "/uss/v1/operational_intents/656a4b29-b902-4ef5-8c10-8d83325cf54a"
+                        }
+                    }
+                },
+                "context": {
+                    "test_name": "Validating response signatures.",
+                    "test_case": "Message signing headers in the response from the outgoing GET request to http://host.docker.internal:8067/uss/v1/operational_intents/656a4b29-b902-4ef5-8c10-8d83325cf54a should be valid."
+                }
+            },
+            {
+                "interaction_id": "13ba8271-e89b-451c-8c2f-b20359ff34c6",
+                "purpose": "Checking that the message signing headers in the incoming POST request to the mock uss endpoint /mock/scd/uss/v1/operational_intents are valid.",
+                "query": {
+                    "request": {
+                        "method": "POST",
+                        "url": "http://host.docker.internal:8074/mock/scd/uss/v1/operational_intents",
+                        "initiated_at": "2023-03-14T13:39:16.797184",
+                        "headers": "{\"User-Agent\": \"ReactorNetty/1.0.18\", \"Host\": \"host.docker.internal:8074\", \"Accept\": \"application/json\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImNsaWVudF9pZCI6Im9uZXNreSIsImV4cGlyZXNfaW4iOjE2Nzg4MDQ2NzgsImlzcyI6ImR1bW15IiwianRpIjoiNGE2OWM1NjgtYTg3NC00NzJmLWI2OGQtMDljODRmYTE4NjY3IiwibmJmIjoxNjc4ODAxMDc4LCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoib25lc2t5IiwidG9rZW5fdHlwZSI6ImJlYXJlciJ9.KeepwODjO2iX0bJ1REOgaJCJRGMk9lz1El-7qZTjvGkCjGspxhpHJOY9D8WonXNl_f3dE_rkuUzX_anIpytK0l-Ptusm3mcza3Kr_coAmZoGXJkjmNsQUyP6YR042cL-VTWHDNNSRRrxLHuNiOQvYTT4Z_MEO3j7TiESR8ddyv8\", \"X-B3-Traceid\": \"78c0fd5f0be65929\", \"X-B3-Spanid\": \"78c0fd5f0be65929\", \"X-B3-Sampled\": \"0\", \"Content-Type\": \"application/json\", \"Content-Digest\": \"sha-512=:Mvqmk9TRx1x47fXQhyZVQtzGwcXK46btLq97DNSz7MdjJQLpoLfb8h2R8eN+KxS0kRnp0d301v9HhdW90b2HDQ==:\", \"X-Utm-Message-Signature\": \"utm-message-signature=:Z+FJjRhYS2LqoTOEvZ9rBzTZFWGH9qqDeQoJmGRjUwOrx73ZunKb+nJFcdB/7Do/YGBBgl3KGWyKm1LOsSeEahI0DiBSm5CjjjoRzbHK8IbVpyTYQjaXMC0Zde88q4bNxX8EDslvRYSHG8T3QrEk761VZFyXMKwqYHEeH4MVMOVL77KPqL6nqdxIZopAIj3ApUQR5bddkSywxN185GmizPQUWFOfEUSlcDvB05+TXgoW9/2p9XdfWpFwP5kkOS0fPZmDn3VTZh9NXXPnwpGksp30BOOGHRKbLhmLuKunQ5uauI6ihkioOBdsJORetEFvY2Z6KdQrerZBonKHatxwbg==:\", \"X-Utm-Message-Signature-Input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1678801156\", \"X-Utm-Jws-Header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"a64648b5-f54c-509b-aa8a-3ee0526e846c\\\", x5u=\\\"https://fims.onesky.xyz/uft-onesky.der\\\"\", \"Date\": \"Tue, 14 Mar 2023 13:39:16 GMT\", \"Content-Length\": \"3379\"}",
+                        "body": "{\"operational_intent_id\":\"0cdea7d5-02c0-4535-af46-db5789a84a14\",\"subscriptions\":[{\"subscription_id\":\"7eed6d02-6f3e-4e9e-8f78-89a8ac43cbf5\",\"notification_index\":2},{\"subscription_id\":\"9bb665be-6054-4079-a2ee-d0307b726241\",\"notification_index\":3},{\"subscription_id\":\"aa70662d-da21-41b2-b055-fd72899cf4f4\",\"notification_index\":1}],\"operational_intent\":{\"reference\":{\"id\":\"0cdea7d5-02c0-4535-af46-db5789a84a14\",\"manager\":\"onesky\",\"version\":1,\"ovn\":\"97G7Aunv52N2afBNjz8XTymRJRUyS3cSncOi5uj-CGQ_\",\"time_start\":{\"value\":\"2023-03-14T13:45:25.951Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-03-14T13:50:25.951Z\",\"format\":\"RFC3339\"},\"uss_base_url\":\"http://host.docker.internal:8067\",\"uss_availability\":\"Normal\",\"subscription_id\":\"67662fdd-4df0-4435-b569-893865de81f8\",\"state\":\"Accepted\"},\"details\":{\"volumes\":[{\"volume\":{\"outline_circle\":null,\"outline_polygon\":{\"vertices\":[{\"lng\":46.9749199998,\"lat\":7.4774238227},{\"lng\":46.9753849998,\"lat\":7.477423821},{\"lng\":46.9753982282,\"lat\":7.4774247705},{\"lng\":46.9754113291,\"lat\":7.4774276097},{\"lng\":46.9754241765,\"lat\":7.4774323113},{\"lng\":46.9754366466,\"lat\":7.4774388302},{\"lng\":46.9754486194,\"lat\":7.4774471034},{\"lng\":46.9754599794,\"lat\":7.4774570513},{\"lng\":46.9754706174,\"lat\":7.4774685782},{\"lng\":46.9754804308,\"lat\":7.477481573},{\"lng\":46.9754893251,\"lat\":7.4774959105},{\"lng\":46.9754972148,\"lat\":7.4775114527},{\"lng\":46.9755040237,\"lat\":7.4775280499},{\"lng\":46.9755096865,\"lat\":7.4775455423},{\"lng\":46.9755141484,\"lat\":7.4775637614},{\"lng\":46.9755173665,\"lat\":7.4775825317},{\"lng\":46.9755193099,\"lat\":7.4776016725},{\"lng\":46.9755199598,\"lat\":7.4776209994},{\"lng\":46.9755199598,\"lat\":7.4780570005},{\"lng\":46.9755193099,\"lat\":7.4780763275},{\"lng\":46.9755173665,\"lat\":7.4780954683},{\"lng\":46.9755141484,\"lat\":7.4781142386},{\"lng\":46.9755096865,\"lat\":7.4781324577},{\"lng\":46.9755040238,\"lat\":7.4781499501},{\"lng\":46.9754972148,\"lat\":7.4781665473},{\"lng\":46.9754893251,\"lat\":7.4781820895},{\"lng\":46.9754804308,\"lat\":7.478196427},{\"lng\":46.9754706174,\"lat\":7.4782094218},{\"lng\":46.9754599794,\"lat\":7.4782209487},{\"lng\":46.9754486194,\"lat\":7.4782308966},{\"lng\":46.9754366467,\"lat\":7.4782391699},{\"lng\":46.9754241766,\"lat\":7.4782456887},{\"lng\":46.9754113292,\"lat\":7.4782503904},{\"lng\":46.9753982282,\"lat\":7.4782532296},{\"lng\":46.9753849998,\"lat\":7.478254179},{\"lng\":46.9749199998,\"lat\":7.4782541773},{\"lng\":46.9749067714,\"lat\":7.4782532278},{\"lng\":46.9748936704,\"lat\":7.4782503885},{\"lng\":46.974880823,\"lat\":7.4782456867},{\"lng\":46.9748683529,\"lat\":7.4782391678},{\"lng\":46.9748563801,\"lat\":7.4782308945},{\"lng\":46.9748450201,\"lat\":7.4782209466},{\"lng\":46.9748343822,\"lat\":7.4782094197},{\"lng\":46.9748245688,\"lat\":7.4781964249},{\"lng\":46.9748156744,\"lat\":7.4781820875},{\"lng\":46.9748077848,\"lat\":7.4781665453},{\"lng\":46.9748009759,\"lat\":7.4781499482},{\"lng\":46.9747953133,\"lat\":7.4781324559},{\"lng\":46.9747908514,\"lat\":7.478114237},{\"lng\":46.9747876333,\"lat\":7.4780954668},{\"lng\":46.97478569,\"lat\":7.4780763262},{\"lng\":46.9747850402,\"lat\":7.4780569994},{\"lng\":46.9747850402,\"lat\":7.4776210005},{\"lng\":46.97478569,\"lat\":7.4776016738}]},\"altitude_lower\":{\"value\":605.0,\"reference\":\"W84\",\"units\":\"M\"},\"altitude_upper\":{\"value\":635.0,\"reference\":\"W84\",\"units\":\"M\"}},\"time_start\":{\"value\":\"2023-03-14T13:45:25.951Z\",\"format\":\"RFC3339\"},\"time_end\":{\"value\":\"2023-03-14T13:50:25.951Z\",\"format\":\"RFC3339\"}}],\"off_nominal_volumes\":[],\"priority\":0}}}"
+                    },
+                    "response": {
+                        "code": 204,
+                        "json": null,
+                        "headers": "{\"Content-Type\": \"application/json\", \"Content-Length\": \"3\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@status\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1678801156\", \"x-utm-message-signature\": \"utm-message-signature=:Rq/OQ443Q11ayY7LsO/sVXzJ+tNOFCWDcTClg0j/J2FhscezHcL6LqaFDbictui808Vc2UYsGyL9meTeZEo55oq7TICXUf+4FlxcdmQERfyrSajpkD7iyhYPQ4YVKKshC9An9mkOBLioIzWgLxwkjvtHLYRABGkyF5szvjwmSkHskOiUzcheZlJZwMWM3ydzeB6xV0yP87e9/tXTLJP2PDzSkX0pc0J9+Hr6CaLNa/kUeQEg0jvKen5aAWW/nNPZz8vNzSUAXIZLDTc9qlpoeuu9L4aBG+agALljvWU7WfHMCyxcjVZhJjCKFKQ8fQLoZZE1aMcIQc4jkfewOCltzA==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}"
+                    }
+                },
+                "context": {
+                    "test_name": "Validating incoming request signatures.",
+                    "test_case": "Message signing headers in the incoming POST request to this mock_uss endpoint:  /mock/scd/uss/v1/operational_intents should be valid."
+                }
+            },
+            {
+                "interaction_id": "511ee95f-3e6b-43f2-97fd-af371b298394",
+                "purpose": "Message signing headers in the response from the outgoing GET request to http://host.docker.internal:8067/uss/v1/operational_intents/0cdea7d5-02c0-4535-af46-db5789a84a14 should be valid.",
+                "query": {
+                    "request": {
+                        "method": "GET",
+                        "url": "http://host.docker.internal:8067/uss/v1/operational_intents/0cdea7d5-02c0-4535-af46-db5789a84a14",
+                        "headers": "{\"User-Agent\": \"python-requests/2.25.1\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept\": \"*/*\", \"Connection\": \"keep-alive\", \"Authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImNsaWVudF9pZCI6Im1vY2stdXNzLmludGVydXNzLmNvbSIsImV4cCI6MTY3ODgwNDY0NywiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.HDGBPqffffudOgVd_QuI0PpFAxM3WO83L2TV5jo0DP5EfceK47Vinx39I3pT0kEtjOcP3UJLLbo0Vqzu7-w5dvI9QtI-X4Kf5FTx_aOdX7iLZXAJTgRkDph408nfGKOojd-wodGXU2KopBLAVxAcbsL2-P97kurQLHSN1KvKCSA\", \"content-type\": \"\", \"x-utm-message-signature-input\": \"utm-message-signature=(\\\"@method\\\" \\\"@path\\\" \\\"@query\\\" \\\"authorization\\\" \\\"content-type\\\" \\\"content-digest\\\" \\\"x-utm-jws-header\\\");created=1678801197\", \"x-utm-message-signature\": \"utm-message-signature=:jc8E4G2vCs3Emy1yr+PSU7qLj3WRi3flm5LHz/NW7d/5jTrMU/wpp5TEHyClahQKb5p6yd6z1XnA/xRsH490qyFdmCJJGoXbaZJsLmDpJikd4g+Jd7VNNiGnSC/+GSW8PpX8qvrn+PVKM4wjRu8jCwAqkr60AT/6bjMMAY5GGdzRPEjZOdwsyyyEzwFiho+BNTG7tScJeTEAgq1nbqHDyYZskWPBeKpW3WNHLtnNFu/OJrt/FVKjSNb6klCxL7LhtUlEkXoOKJtRInTpv34kI6noQVbjcZYV5/sop/O3m1O025/2216HCqYQJrxkIF4J3PJ6QUtICVjUQCEnzE7Seg==:\", \"x-utm-jws-header\": \"alg=\\\"RS256\\\", typ=\\\"JOSE\\\", kid=\\\"mock_uss_priv_key\\\", x5u=\\\"http://host.docker.internal:8077/mock/scd/.well-known/uas-traffic-management/mock_pub.der\\\"\", \"content-digest\": \"sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:\"}",
+                        "body": null
+                    },
+                    "response": {
+                        "code": 403,
+                        "headers": "{'WWW-Authenticate': 'Signature verification failed for CN=mock-uss.interuss.com,OU=Freddie-UFT,O=NASA,C=US', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY', 'content-digest': 'sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==:', 'x-utm-message-signature': 'utm-message-signature=:g7Osl2jXYuXGFJB1ezRdorn6oi/XWlrHMsFKqKqSUxH1LNm7VQRX5DC9wZ3cAnphTeAbgAboyJnzQsVVE+/I985yzNOeUauVMWuPMNdZTicK+SnHV0etIiEjRnoQLEnPrL8GbkWV5e23uz6Yvb79yNRIX8uzqkXQo6tDUI97ZaNgypI/fNA+e4RZh/p0jER65hujK1Yi90fedppz95Y08bb3XCcm7ovG/WYCA+1MEDYx0rIcI3/MLV/qJsborYlQaJIYDdmsrUAuMUR0b8wr35PIrNBRKyl0YkPrYbDR1c/d9v+bH+VJ98UPdi+X9UemfCpU608zMClbP6hYz0OCVQ==:', 'x-utm-message-signature-input': 'utm-message-signature=(\"@status\" \"content-type\" \"content-digest\" \"x-utm-jws-header\");created=1678801198', 'x-utm-jws-header': 'alg=\"RS256\", typ=\"JOSE\", kid=\"a64648b5-f54c-509b-aa8a-3ee0526e846c\", x5u=\"https://fims.onesky.xyz/uft-onesky.der\"', 'Date': 'Tue, 14 Mar 2023 13:39:58 GMT', 'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJob3N0LmRvY2tlci5pbnRlcm5hbCIsImNsaWVudF9pZCI6Im1vY2stdXNzLmludGVydXNzLmNvbSIsImV4cCI6MTY3ODgwNDY0NywiaXNzIjoiZHVtbXkiLCJzY29wZSI6InV0bS5zdHJhdGVnaWNfY29vcmRpbmF0aW9uIiwic3ViIjoibW9jay11c3MuaW50ZXJ1c3MuY29tIn0.HDGBPqffffudOgVd_QuI0PpFAxM3WO83L2TV5jo0DP5EfceK47Vinx39I3pT0kEtjOcP3UJLLbo0Vqzu7-w5dvI9QtI-X4Kf5FTx_aOdX7iLZXAJTgRkDph408nfGKOojd-wodGXU2KopBLAVxAcbsL2-P97kurQLHSN1KvKCSA', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Keep-Alive': 'timeout=60', 'Connection': 'keep-alive'}",
+                        "json": {
+                            "timestamp": "2023-03-14T13:39:58.065+00:00",
+                            "status": 403,
+                            "error": "Forbidden",
+                            "path": "/uss/v1/operational_intents/0cdea7d5-02c0-4535-af46-db5789a84a14"
+                        }
+                    }
+                },
+                "context": {
+                    "test_name": "Validating response signatures.",
+                    "test_case": "Message signing headers in the response from the outgoing GET request to http://host.docker.internal:8067/uss/v1/operational_intents/0cdea7d5-02c0-4535-af46-db5789a84a14 should be valid."
+                }
+            }
+        ],
+        "issues": [
+            {
+                "context": {
+                    "test_name": "Checking for a valid content digest header.",
+                    "test_case": "content-digest header in the response header should be valid."
+                },
+                "summary": "Content Digest in the response header was not valid.",
+                "details": "Mismatched content-digest values. From the header: sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==: Content Digest value that was calculated from the response body: sha-512=:2mYw+IkaZo1xdBIkz9aO3HEEwL5F3Ml136KzWbm0LENHEZu3Gr7FepHg7pFRCLfOLuqBOboXfYXyA8YDzb0zPA==:",
+                "interactions": [
+                    "5a9dedad-f89e-4360-ae0d-88a2def97fc9"
+                ]
+            },
+            {
+                "context": {
+                    "test_name": "Validating response header signatures.",
+                    "test_case": "Message signing headers in the response should pass the RSASSA-PKCS1-V1_5-VERIFY validation function."
+                },
+                "summary": "Could not validate x-utm-message-signature header in the response!",
+                "details": "Invalid signature",
+                "interactions": [
+                    "5a9dedad-f89e-4360-ae0d-88a2def97fc9"
+                ]
+            },
+            {
+                "context": {
+                    "test_name": "Checking for a valid content digest header.",
+                    "test_case": "content-digest header in the response header should be valid."
+                },
+                "summary": "Content Digest in the response header was not valid.",
+                "details": "Mismatched content-digest values. From the header: sha-512=:z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==: Content Digest value that was calculated from the response body: sha-512=:V8ta+8iQOjcaoGfyXBkmyx3UQGcFjivC4tv/HLOavhq0iRn6Vu2UbJlCDQG1sPo5aGTiRjpwO2sRFc7mVLGTVA==:",
+                "interactions": [
+                    "511ee95f-3e6b-43f2-97fd-af371b298394"
+                ]
+            },
+            {
+                "context": {
+                    "test_name": "Validating response header signatures.",
+                    "test_case": "Message signing headers in the response should pass the RSASSA-PKCS1-V1_5-VERIFY validation function."
+                },
+                "summary": "Could not validate x-utm-message-signature header in the response!",
+                "details": "Invalid signature",
+                "interactions": [
+                    "511ee95f-3e6b-43f2-97fd-af371b298394"
+                ]
+            }
+        ]
+    }
+}
